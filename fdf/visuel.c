@@ -71,6 +71,7 @@ int 	*ft_count_xy(char *buf, int fd, int *nblc)
 	return (nblc);
 }
 
+//Fuionner les 2 voir les 3 et utiliser ft_range 
 //Rempli le tableau de valeurs D3 en x et renvoi le tableau rempli.
 int 	*ft_rempx(char x, t_D3 D3)
 {
@@ -212,8 +213,8 @@ void 	initvisu(int *countxy, t_D2 D2)
 	void	*win;
 
 	mlx = mlx_init();
-	win = mlx_new_window(mlx, countxy[0], countxy[1], "Fil de fer");
-	affpoints(win, mlx, countxy, D2);
+	win = mlx_new_window(mlx, countxy[0] * 100 / 2, countxy[1] * 100 / 2, "Fil de fer");
+	affpoints(win, mlx, countxy, D2);	
 	mlx_loop(mlx);													//On attend des evenements
 }
 
