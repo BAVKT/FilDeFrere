@@ -39,3 +39,6 @@ typedef struct 	s_D2
 	float 		*x;
 	float 		*y;
 } 				t_D2;
+
+t_D3            g_D3;
+t_D3            g_D2;

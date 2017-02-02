@@ -10,40 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx.h"
-#include "libft.h"
-#include <sys/types.h>		//Les Headers nécéssaire
-#include <sys/stat.h>
-#include <fcntl.h>
-#define SIZE 42
-
-//Les coordonees du point de vue. Le x et y correspondent aux tailles de la fenettre divisé par deux 
-//et le z represente la distance approximative entre nous et l'ecran. On va dire 1000.
-typedef struct 	s_view
-{
-	int 		x;
-	int 		y;
-	int 		z;
-}				t_view;
-//Les coordonees D3 donc recuperees avec les autres fonctions
-typedef struct 	s_D3
-{
-	int 		*x;
-	int 		*y;
-	int 		*z;
-}				t_D3;
-
-//La conversion des donees D3 en donnees D2.
-typedef struct 	s_D2
-{
-	int 		*x;
-	int 		*y;
-} 				t_D2;
+#include "fdf.h"
+#include <stdio.h>
 
 //Fonction a retrecir.
 //Sert a compter le nombre de lignes et de caracteres (win_x && win_y)
 int 	*ft_count_xy(char *buf, int fd, int *nblc)
 {
+	ft_putendl("countxy");
 	int i;
 	int end;
 
@@ -72,170 +46,210 @@ int 	*ft_count_xy(char *buf, int fd, int *nblc)
 }
 
 //Fuionner les 2 voir les 3 et utiliser ft_range 
-//Rempli le tableau de valeurs D3 en x et renvoi le tableau rempli.
-int 	*ft_rempx(char x, t_D3 D3)
+//Rempli le tableau de valeurs g_D3 en x et renvoi le tableau rempli.
+void 	ft_rempx(int x, int y)
 {
-	ft_putstr("rempx\n");
+	ft_putendl("rempx");
 	int 	i;
 	int 	j;
+	int 	k;
 
 	i = 0;
-	j = 1;
-	while (j <= x)
-		D3.x[i++] = j++;
-	return(D3.x);
+	j = 0;
+	k = 1;
+	while (j <= x * y)
+	{
+		if (k == x + 1)
+			k = 1;
+		g_D3.x[i++] = k++;
+		j++;
+	}
 }
 
 //Rempli le tableau en y
-int 	*ft_rempy(int y, t_D3 D3)
+void 	ft_rempy(int y, int x)
 {
-	ft_putstr("rempy\n");
+	ft_putendl("rempy");
 	int 	i;
 	int 	j;
+	int 	k;
 
 	i = 0;
-	j = 1;
-	while (j <= y)
-		D3.y[i++] = j++;
-	return(D3.y);
+	j = 0;
+	k = 1;
+	while (j <= y * x)
+	{
+		if (k == y + 1)
+			k = 1;
+		g_D3.y[i++] = k++;
+		j++;
+	}
 }
 
 //Permet de récupérer le Z en 3D
-int 	*ft_rempz(char *buf, int fd, t_D3 D3)
+void 	ft_rempz(char *buf, int fd)
 {
+	ft_putendl("rempz");
 	int 	end;
 	char 	**tabc;		//Le retour de strsplit, double tableau de char
 	int 	i;
 	int 	j;
 
 	j = 0;
-	while ((end = read(fd, buf, SIZE)))
+	while ((end = read(fd, buf, SIZE)) > 0)
 	{
 		i = 0;
 		buf[end] = '\0';
-		tabc = ft_strsplit((const char *)buf, ' ');
+		tabc = ft_strsplit((const char *)buf, ' ');			
 		while (tabc[i])
-			D3.z[j++] = ft_atoi(tabc[i++]); 		//On converti le resultat dans le tableau.
+			g_D3.z[j++] = ft_atoi(tabc[i++]); 	//On converti le resultat dans le tableau.
 	}
-	return(D3.z);
 }
 
 //Retourne un tableau avec la conversion des donnees 3D en 2D
-t_D2 	conv_xy(int *countxy, t_D3 D3, t_D2 D2, t_view V)
+void 	ft_conv_xy(int *countxy)
 {
-	int i;
+	ft_putendl("convxy");
+	int 	i;
+	float 	cte;
 
 	i = 0;
-	while (i < D3.x[countxy[0]])
+	cte = 0.7;
+	while (i < countxy[0] * countxy[1])
 	{
-		D2.x[i] = (V.z * (D3.x[i] - V.x) / (V.z + D3.z[i]) + V.x);
+
+		g_D2.x[i] = (g_D3.x[i] + cte * g_D3.z[i]);
+		g_D2.y[i] = (g_D3.y[i] + (cte/2) * g_D3.z[i]);
 		i++;
 	}
-	i = 0;
-	while (i < D3.y[countxy[1]])
-	{
-		D2.y[i] = (V.z * (D3.y[i] - V.y) / (V.z + D3.z[i]) + V.y);
-		i++;
-	}
-	return (D2);
 }
-
 
 //Initialise les tableaux pour recuperer et convertir et remplir le tableau final en 2D.
 //countxy[0] = win_x && countxy[1] = win_y
-t_D2 ft_def(int *countxy, char *buf, int fd)
+void 	ft_def(int *countxy, char *buf, int fd)
 {
-	t_view	V;
-	t_D3 	D3;
-	t_D2 	D2;
-	int 	fd2;
+	ft_putendl("ft_def");
+	float 	size;
 
-	fd2 = fd;
-	D2.x = (int *)malloc(sizeof(int) * countxy[0]);
-	D2.y = (int *)malloc(sizeof(int) * countxy[1]);
-	D3.x = (int *)malloc(sizeof(int) * countxy[0]);
-	D3.y = (int *)malloc(sizeof(int) * countxy[1]);
-	D3.z = (int *)malloc(sizeof(int) * (countxy[1] * countxy[0]));
-	V.x = countxy[0] / 2;
-	V.y = countxy[1] / 2;
-	V.z = 1000;
-	D3.x = ft_rempx(buf, fd, D3);
+	size = countxy[0] * countxy[1];
+	g_D2.x = (float *)malloc(sizeof(float) * size);
+	g_D2.y = (float *)malloc(sizeof(float) * size);
+	g_D3.x = (float *)malloc(sizeof(float) * size);
+	g_D3.y = (float *)malloc(sizeof(float) * size);
+	g_D3.z = (float *)malloc(sizeof(float) * size);
 	close(fd);
-	fd = fd2;
-	D3.y = ft_rempy(buf, fd, D3);
-	close(fd);
-	fd = fd2;
-	D3.z = ft_rempz(buf, fd, D3);
-	close(fd);
-	D2 = conv_xy(countxy, D3, D2, V);
-	return (D2);
 }
 
-//TEST A SUPPRIMER POUR AFFICHER LES POITNS CONVERTIS.
-void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
+
+/*
+//Deuxieme test d'affichage qui ne marche pas.
+void 	affpoints(void *win, void *mlx, int *countxy, t_g_D2 g_D2)
 {
+	ft_putendl("affpoints");
 	int x;
 	int y;
+	int i;
+	int j;
 	int interval;
 
-	interval = 50;
-	x = interval;
-	while (x < countxy[1] * countxy[0])
+	i = 0;
+	j = 0;
+	interval = 20;
+	x = 0;
+	while (x < countxy[0] * interval)
 	{
-		y = interval;
-		while (y < (countxy[1] * countxy[0]) - interval)
+		y = 0;
+		j = 0;
+		while (y < countxy[1] * interval)
 		{
-			mlx_pixel_put(mlx, win, D2.x[x], D2.y[y], 0x00FFFFFF);
+			ft_putstr("g_D2.x = ");
+			ft_putnbrendl(g_D2.x[i]);
+			ft_putstr(" - g_D2.y = ");
+			ft_putnbrendl(g_D2.y[j]);
+			mlx_pixel_put(mlx, win, g_D2.x[i] * interval, g_D2.y[j] * interval, 0x00FFFFFF);
 			y+=interval;
+			j++;
 		}
 		x+=interval;
+		i++;
 	}
-	y = interval;
-	while (y < countxy[1] * countxy[0])
+	i = 0;
+	j = 0;
+	y = 0;
+	while (y < countxy[1] * interval)
 	{
-		x = interval;
-		while (x < (countxy[1] * countxy[0]) - interval)
+		x = 0;
+		i = 0;
+		while (x < countxy[0] * interval)
 		{
-			mlx_pixel_put(mlx, win, D2.x[x], D2.y[y], 0x00FFFFFF);
+			mlx_pixel_put(mlx, win, g_D2.x[i++] * interval, g_D2.y[j++] * interval, 0x00FFFFFF);
 			x+=interval;
 		}
 		y+=interval;
 	}
+
+}*/
+
+//Troisieme test d'affichage.
+void 	affpoints(void *win, void *mlx, int *countxy)
+{
+	ft_putendl("affpoints");
+	int x;
+	int y;
+	int i;
+	int j;
+	float interval;
+
+	i = 0;
+	interval = 20;
+	while (i < countxy[0])
+	{
+		j = 0;
+		while (j < countxy[1])
+		{
+			mlx_pixel_put(mlx, win, g_D2.x[i] * interval, g_D2.y[j] * interval, 0x00FFFFFF);
+			j++;
+		}
+		i++;
+	}
 }
 
-//Lance la fenetre et l'ffichage
-//reste a determiner le calcul qui donne la taille de la fenetre
-//Et faire en sorte de mettre un scroll si c'est trop grand
-//Ou mettre une taille de fenetre de base en dur et automatiquement metre du scroll.
-void 	initvisu(int *countxy, t_D2 D2)
+//Lance la fenetre et l'affichage
+void 	initvisu(int *countxy)
 {
+	ft_putendl("initvisu");
 	void	*mlx;
 	void	*win;
 
 	mlx = mlx_init();
-	win = mlx_new_window(mlx, countxy[0] * 100 / 2, countxy[1] * 100 / 2, "Fil de fer");
-	affpoints(win, mlx, countxy, D2);	
+	win = mlx_new_window(mlx, (countxy[0] * 100)/2, (countxy[1] * 100)/2, "Fil de fer");
+	affpoints(win, mlx, countxy);	
 	mlx_loop(mlx);													//On attend des evenements
 }
 
 void 	initcalcul(char *arg)
 {
+	ft_putendl("initcalcul");
 	int 	*countxy;
 	int 	*nblc;
 	int		fd;
 	char	buf[SIZE + 1];
-	t_D2 	D2;
 
 	nblc = (int *)malloc(sizeof(int) * 2);
 	nblc[0] = 0;
 	nblc[1] = 0;
 	fd = open(arg, O_RDONLY);
-	countxy = ft_countxy(buf, fd, nblc);
+	countxy = ft_count_xy(buf, fd, nblc);
 	close(fd);
 	fd = open(arg, O_RDONLY);
-	D2 = ft_def(countxy, buf, fd);
+	ft_def(countxy, buf, fd);
 	close(fd);
-	initvisu(countxy, D2);
+	ft_rempx(countxy[0], countxy[1]);
+	ft_rempy(countxy[1], countxy[0]);
+	ft_rempz(buf, fd);
+	ft_conv_xy(countxy);
+	close(fd);
+	initvisu(countxy);
 }
 
 int 	main(int argc, char **argv)
@@ -246,57 +260,3 @@ int 	main(int argc, char **argv)
 		ft_putstr("Mauvais nombre de fichiers passés");
 	return (0);
 }
-
-
-/*
-//La fonction pour ouvrir la fenetre et tracer la grille
-void	trace_grille(void *win, void *mlx, int *wintab, int *tabi) 	//Faut utiliser tabi pour donenr les vraies valeurs
-{
-	int 	y;
-	int 	x;
-	int 	interval;
-	int 	i;
-
-	i = tabi[0];	//juste pour utilsier tabi
-	i = 0;
-	interval = 50; 				//Rien ne s'affiche si on passe pas une valeur en dur.
-	y = interval;
-	while (y < wintab[1] * wintab[2]) 	//La taille de base de win_y
-	{
-		x = interval;
-		while (x < (wintab[0] * wintab[2]) - interval)					//JE vois pas trop quels calculs faire avec tabi
-			mlx_pixel_put(mlx, win, x++, y, 0x00FFFFFF);
-		y+=interval;
-	}
-	i = 0;
-	x = interval;
-	while (x < wintab[0] * wintab[2])
-	{
-		y = interval;
-		while (y < (wintab[1] * wintab[2]) - interval)
-			mlx_pixel_put(mlx, win, x, y++, 0x00DA57BC);
-		x+=interval;
-	}
-}
-*/
-//###########################################################################################
-//AUTRE
-//###########################################################################################
-/*
-
-#proteger le retour de mlx_init(); Commande :
-env -i <votre-executable> 			S’il plante, c’est que vous ne l’avez pas bien protégé 😉
-
-◦ open
-◦ read
-◦ write
-◦ close
-◦ malloc
-◦ free
-◦ perror
-◦ strerror
-◦ exit
-◦ Toutes les fonctions de la lib math (-lm et man 3 math)
-◦ Toutes les fonctions de la miniLibX.
-
-*/

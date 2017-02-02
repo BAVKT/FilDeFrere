@@ -46,8 +46,8 @@ int 	*ft_count_xy(char *buf, int fd, int *nblc)
 }
 
 //Fuionner les 2 voir les 3 et utiliser ft_range 
-//Rempli le tableau de valeurs D3 en x et renvoi le tableau rempli.
-float 	*ft_rempx(int x, int y, t_D3 D3)
+//Rempli le tableau de valeurs g_D3 en x et renvoi le tableau rempli.
+void 	ft_rempx(int x, int y)
 {
 	ft_putendl("rempx");
 	int 	i;
@@ -61,14 +61,13 @@ float 	*ft_rempx(int x, int y, t_D3 D3)
 	{
 		if (k == x + 1)
 			k = 1;
-		D3.x[i++] = k++;
+		g_D3.x[i++] = k++;
 		j++;
 	}
-	return(D3.x);
 }
 
 //Rempli le tableau en y
-float 	*ft_rempy(int y, int x, t_D3 D3)
+void 	ft_rempy(int y, int x)
 {
 	ft_putendl("rempy");
 	int 	i;
@@ -82,14 +81,13 @@ float 	*ft_rempy(int y, int x, t_D3 D3)
 	{
 		if (k == y + 1)
 			k = 1;
-		D3.y[i++] = k++;
+		g_D3.y[i++] = k++;
 		j++;
 	}
-	return(D3.y);
 }
 
 //Permet de récupérer le Z en 3D
-float 	*ft_rempz(char *buf, int fd, t_D3 D3)
+void 	ft_rempz(char *buf, int fd)
 {
 	ft_putendl("rempz");
 	int 	end;
@@ -104,54 +102,48 @@ float 	*ft_rempz(char *buf, int fd, t_D3 D3)
 		buf[end] = '\0';
 		tabc = ft_strsplit((const char *)buf, ' ');			
 		while (tabc[i])
-			D3.z[j++] = ft_atoi(tabc[i++]); 	//On converti le resultat dans le tableau.
+			g_D3.z[j++] = ft_atoi(tabc[i++]); 	//On converti le resultat dans le tableau.
 	}
-	return(D3.z);
 }
 
 //Retourne un tableau avec la conversion des donnees 3D en 2D
-t_D2 	conv_xy(int *countxy, t_D3 D3, t_D2 D2)
+void 	ft_conv_xy(int *countxy)
 {
 	ft_putendl("convxy");
 	int 	i;
 	float 	cte;
 
 	i = 0;
-	cte = 0.7;
+	cte = 0.789;
 	while (i < countxy[0] * countxy[1])
 	{
-		D2.x[i] = (D3.x[i] + cte * D3.z[i]);
-		D2.y[i] = (D3.y[i] + (cte/2) * D3.z[i]);
+
+		g_D2.x[i] = (g_D3.x[i] + cte * g_D3.z[i]);
+		g_D2.y[i] = (g_D3.y[i] + (cte/2) * g_D3.z[i]);
 		i++;
 	}
-	return (D2);
 }
 
 //Initialise les tableaux pour recuperer et convertir et remplir le tableau final en 2D.
 //countxy[0] = win_x && countxy[1] = win_y
-t_D2 ft_def(int *countxy, char *buf, int fd)
+void 	ft_def(int *countxy, char *buf, int fd)
 {
 	ft_putendl("ft_def");
-	t_D3 	D3;
-	t_D2 	D2;
+	float 	size;
 
-	D2.x = (float *)malloc(sizeof(float) * countxy[0]);
-	D2.y = (float *)malloc(sizeof(float) * countxy[1]);
-	D3.x = (float *)malloc(sizeof(float) * countxy[0]);
-	D3.y = (float *)malloc(sizeof(float) * countxy[1]);
-	D3.z = (float *)malloc(sizeof(float) * (countxy[1] * countxy[0]));
-	D3.x = ft_rempx(countxy[0], countxy[1], D3);
-	D3.y = ft_rempy(countxy[1], countxy[0], D3);
-	D3.z = ft_rempz(buf, fd, D3);
-	D2 = conv_xy(countxy, D3, D2);
+	size = countxy[0] * countxy[1];
+	g_D2.x = (float *)malloc(sizeof(float) * size);
+	g_D2.y = (float *)malloc(sizeof(float) * size);
+	g_D3.x = (float *)malloc(sizeof(float) * size);
+	g_D3.y = (float *)malloc(sizeof(float) * size);
+	g_D3.z = (float *)malloc(sizeof(float) * size);
 	close(fd);
-	return (D2);
 }
 
 
 /*
 //Deuxieme test d'affichage qui ne marche pas.
-void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
+void 	affpoints(void *win, void *mlx, int *countxy, t_g_D2 g_D2)
 {
 	ft_putendl("affpoints");
 	int x;
@@ -170,11 +162,11 @@ void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
 		j = 0;
 		while (y < countxy[1] * interval)
 		{
-			ft_putstr("D2.x = ");
-			ft_putnbrendl(D2.x[i]);
-			ft_putstr(" - D2.y = ");
-			ft_putnbrendl(D2.y[j]);
-			mlx_pixel_put(mlx, win, D2.x[i] * interval, D2.y[j] * interval, 0x00FFFFFF);
+			ft_putstr("g_D2.x = ");
+			ft_putnbrendl(g_D2.x[i]);
+			ft_putstr(" - g_D2.y = ");
+			ft_putnbrendl(g_D2.y[j]);
+			mlx_pixel_put(mlx, win, g_D2.x[i] * interval, g_D2.y[j] * interval, 0x00FFFFFF);
 			y+=interval;
 			j++;
 		}
@@ -190,7 +182,7 @@ void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
 		i = 0;
 		while (x < countxy[0] * interval)
 		{
-			mlx_pixel_put(mlx, win, D2.x[i++] * interval, D2.y[j++] * interval, 0x00FFFFFF);
+			mlx_pixel_put(mlx, win, g_D2.x[i++] * interval, g_D2.y[j++] * interval, 0x00FFFFFF);
 			x+=interval;
 		}
 		y+=interval;
@@ -199,7 +191,7 @@ void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
 }*/
 
 //Troisieme test d'affichage.
-void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
+void 	affpoints(void *win, void *mlx, int *countxy)
 {
 	ft_putendl("affpoints");
 	int x;
@@ -209,13 +201,13 @@ void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
 	float interval;
 
 	i = 0;
-	interval = 20;
+	interval = 10;
 	while (i < countxy[0])
 	{
 		j = 0;
 		while (j < countxy[1])
 		{
-			mlx_pixel_put(mlx, win, D2.x[i] * interval, D2.y[j] * interval, 0x00FFFFFF);
+			mlx_pixel_put(mlx, win, g_D2.x[i] * interval, g_D2.y[j] * interval, 0x00FFFFFF);
 			j++;
 		}
 		i++;
@@ -223,7 +215,7 @@ void 	affpoints(void *win, void *mlx, int *countxy, t_D2 D2)
 }
 
 //Lance la fenetre et l'affichage
-void 	initvisu(int *countxy, t_D2 D2)
+void 	initvisu(int *countxy)
 {
 	ft_putendl("initvisu");
 	void	*mlx;
@@ -231,7 +223,7 @@ void 	initvisu(int *countxy, t_D2 D2)
 
 	mlx = mlx_init();
 	win = mlx_new_window(mlx, (countxy[0] * 100)/2, (countxy[1] * 100)/2, "Fil de fer");
-	affpoints(win, mlx, countxy, D2);	
+	affpoints(win, mlx, countxy);	
 	mlx_loop(mlx);													//On attend des evenements
 }
 
@@ -242,7 +234,6 @@ void 	initcalcul(char *arg)
 	int 	*nblc;
 	int		fd;
 	char	buf[SIZE + 1];
-	t_D2 	D2;
 
 	nblc = (int *)malloc(sizeof(int) * 2);
 	nblc[0] = 0;
@@ -251,9 +242,15 @@ void 	initcalcul(char *arg)
 	countxy = ft_count_xy(buf, fd, nblc);
 	close(fd);
 	fd = open(arg, O_RDONLY);
-	D2 = ft_def(countxy, buf, fd);
+	ft_def(countxy, buf, fd);
 	close(fd);
-	initvisu(countxy, D2);
+	fd = open(arg, O_RDONLY);
+	ft_rempx(countxy[0], countxy[1]);
+	ft_rempy(countxy[1], countxy[0]);
+	ft_rempz(buf, fd);
+	ft_conv_xy(countxy);
+	close(fd);
+	initvisu(countxy);
 }
 
 int 	main(int argc, char **argv)
