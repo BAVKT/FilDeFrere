@@ -12,16 +12,51 @@
 
 #include "fdf.h"
 
+/*
+** Start and fill the image
+*/
+/*
+void	image(t_base *base)
+{
+			ft_putendlcolor("image()", MAGENTA);
+	int		*img;
+	int		*data;
 
+	img = mlx_new_image(base->mlx, base->size[0], base->size[1]);
+	data = mlx_get_data_addr(img, 8, &base->size[0], 0);
+}
+*/
 
+/*
+** Draw the lines mais sert a rien vu qu'il exrit pas dans l'image
+*/
+/*
+void	draw(int x1, int x2, int y1, int y2)
+{
+			ft_putendlcolor("draw()", MAGENTA);
+	int x 
 
+	x = x1;
+	while (x <= x2)
+	{
+		mlx_pixel_put(base->mlx, base->win, x, y1+((y2-y1) * (x -x1))/(x2-x1), 0x00FFFFFF);
+		x++;
+	}
+}
+*/
 
+/*
+** Write in the image (kind of pixel_put)
+*/
+//y*size+x Demander a Gael l'utilité
+/*
+void	px_img(int *img)
+{
+	int	i;
 
-
-
-
-
-
+	i = 0;
+}
+*/
 
 
 //############################################################################################

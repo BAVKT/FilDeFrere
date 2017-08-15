@@ -6,14 +6,44 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 21:19:04 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/14 22:52:08 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
+/*
+** Fill the x tab
+*/
 
+void 	get_xyz(t_d *d, char *line)
+{
+			ft_putendlcolor("get_x()", MAGENTA);
+	int		i;
+	int		j;
+	int		k;
+	char	*c;
 
+	i = 0;
+	j = 1;
+	c = ft_strnew(8);
+	while (line[i])
+	{
+		k = 0;
+		while (line[i] && !ft_isdigit(line[i]))
+			i++;
+		d->z[j] = (line[i - 1] == '-') ? -1 : 1;
+		while (line[i] && ft_isdigit(line[i]))
+			c[k++] = line[i++];
+		c[k] = '\0';
+		d->x[j] = j;
+		d->y[j] = j;
+		d->z[j] *= ft_atoi(c);
+		j++;
+		i++;
+		free(c);
+	}
+}
 
 
 

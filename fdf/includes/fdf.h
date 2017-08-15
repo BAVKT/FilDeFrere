@@ -42,8 +42,9 @@ typedef struct 		s_base
 {
 	void 			*mlx;
 	void 			*win;
-	int 			size;
+	int 			*size;
 	int 			interval;
+	char			*av;
 	struct	s_d		d;
 	struct	s_view	view;
 }					t_base;
@@ -52,6 +53,7 @@ void				fdf(t_base *base);
 void				error_parse(int e);
 void				check_file(char *av);
 t_base				init_base(t_base *base);
-t_d					init_d(t_d *d);
+void				init_d(t_base *base);
+void				get_xyz(t_d *d, char *line);
 
 #endif

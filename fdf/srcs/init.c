@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 22:45:01 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/14 22:52:08 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,35 @@
 
 t_base	init_base(t_base *base)
 {
-	base->view.vx = base->size;
-	base->view.vy = base->size;
+			ft_putendlcolor("init_base()", MAGENTA);
+	base->view.vx = base->size[0];
+	base->view.vy = base->size[0];
 	base->view.vz = 1000;
 	base->interval = 20;
-	base->d = init_d(&base->d);
+	init_d(base);
 	base->mlx = mlx_init();
-	base->win = mlx_new_window(base->mlx, 100, 100, "Fil de fer");
+	base->win = mlx_new_window(base->mlx, 1000, 1000, "Fil de fer");
 	return (*base);
 }
 
-t_d		init_d(t_d *d)
+/*
+** Init the t_d with all the x/y basic AND converted values 
+*/
+
+void		init_d(t_base *base)
 {
-	return (*d);
+			ft_putendlcolor("init_d()", MAGENTA);
+	char	*str;
+	int		fd;
+
+	str = ft_strnew(0);
+	fd = open(base->av, O_RDONLY);
+	while (get_next_line(fd, &str) > 0)
+	{
+		get_xyz(&base->d, str);
+		free(str);
+	}
+	close(fd);
 }
 
 

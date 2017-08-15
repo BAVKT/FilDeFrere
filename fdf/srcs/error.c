@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 20:32:51 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 22:46:16 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/14 22:52:07 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 void	error_parse(int e)
 {
+			ft_putendlcolor("error_parse()", MAGENTA);
 	ft_putstr("Error: ");
 	if (e == -1)
 		ft_putendlcolor("Usage: ./fdf map.fdf", GREEN);

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 21:33:33 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 22:49:16 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/14 22:52:07 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,10 @@ void	check_file(char *av)
 		while (s[i])
 		{
 			if (!ft_isdigit(s[i]) && s[i] != ' ' && s[i] != '-' && s[i] != 9)
-			{
-					ft_putchar(s[i]);
 				error_parse(4);
-			}
 			i++;
 		}
+		free(s);
 	}
 	close(fd);
 }
