@@ -18,6 +18,7 @@
 
 void	check_file(char *av)
 {
+			ft_putendlcolor("check_file()", MAGENTA);	
 	int		i;
 	int		fd;
 	char	*s;

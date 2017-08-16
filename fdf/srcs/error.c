@@ -31,6 +31,6 @@ void	error_parse(int e)
 	else if (e == 4)
 		ft_putstr_fd("Map contain somes wrong char. ", 2);	
 	else if (e == 5)
-		ft_putstr_fd("Le fichier passé est vide. ", 2);	
+		ft_putstr_fd("Map is too big. ", 2);	
 	exit(0);
 }

@@ -13,40 +13,103 @@
 #include "fdf.h"
 
 /*
-** Fill the x tab
+** Get the x & y values 
 */
 
-void 	get_xyz(t_d *d, char *line)
+void 	get_xy(t_base *base, char *line)
 {
-			ft_putendlcolor("get_x()", MAGENTA);
+			ft_putendlcolor("get_xy()", MAGENTA);
 	int		i;
 	int		j;
+	char	*c;
+
+	i = 0;
+	j = 0;
+	c = ft_strnew(8);
+	while (line[i])
+	{
+		while (line[i] && !ft_isdigit(line[i]))
+			i++;
+		while (line[i] && ft_isdigit(line[i]))
+			i++;
+		j++;
+	}
+	i = 0;
+	while (line[i])
+	{
+		if (ft_isdigit(line[i++]))
+		{
+			base->d.y++;
+			break ;
+		}
+	}
+	base->d.x = (j > base->d.x) ? j : base->d.x;
+}
+
+
+/*
+** Fill the z tab 
+*/
+
+int		get_z(t_base *base, char *line, int j)
+{
+			ft_putendlcolor("get_z()", MAGENTA);
+	int		i;
 	int		k;
 	char	*c;
 
 	i = 0;
-	j = 1;
 	c = ft_strnew(8);
 	while (line[i])
 	{
 		k = 0;
 		while (line[i] && !ft_isdigit(line[i]))
 			i++;
-		d->z[j] = (line[i - 1] == '-') ? -1 : 1;
+				ft_putendl("yo");
+		base->d.z[j] = (line[i - 1] == '-') ? -1 : 1;
 		while (line[i] && ft_isdigit(line[i]))
 			c[k++] = line[i++];
 		c[k] = '\0';
-		d->x[j] = j;
-		d->y[j] = j;
-		d->z[j] *= ft_atoi(c);
+			ft_putstr("c = ");
+			ft_putendl(c);
+		base->d.z[j] *= ft_atoi(c);
+			ft_putstr("base->d.z = ");
+			ft_putnbrendl(base->d.z[j]);
 		j++;
 		i++;
-		free(c);
+		//free(c);
 	}
+	return (j);
 }
 
+/*
+** Return the interval according to the win_size and x/y
+*/
+// Sertt a rien parce que return 10
 
+int		get_interval(t_base *base)
+{
+	int nb;
+	int xm;
+	int ym;
 
+	nb = 0;
+	xm = 2560;
+	ym = 1440;
+	if (base->d.x > xm / 4 || base->d.y > ym / 4)
+		error_parse(5);
+	if (base->d.x < xm / 10 && base->d.y < ym / 10)
+	{
+		if (base->d.x < xm / 50 && base->d.y < ym / 50)
+		{
+			if (base->d.x < xm / 100 && base->d.y < ym / 100)
+				nb = 15;
+			nb = 7;
+		}
+		nb = 2;
+	}
+	return (20);
+}
 
 
 

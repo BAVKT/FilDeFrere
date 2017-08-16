@@ -12,6 +12,12 @@
 
 #include "fdf.h"
 
+//
+// Chaque case du int* img fait 32bits on peut donc stocker 
+// dans chaque case soit en 8 soit en 16 soit en 32bits
+//
+//
+
 /*
 ** Start and fill the image
 */
@@ -22,41 +28,45 @@ void	image(t_base *base)
 	int		*img;
 	int		*data;
 
+	img = (int *)malloc(sizeof(int) * base->size);
 	img = mlx_new_image(base->mlx, base->size[0], base->size[1]);
 	data = mlx_get_data_addr(img, 8, &base->size[0], 0);
 }
 */
 
 /*
-** Draw the lines mais sert a rien vu qu'il exrit pas dans l'image
+** Return the color of the pixel
 */
-/*
-void	draw(int x1, int x2, int y1, int y2)
-{
-			ft_putendlcolor("draw()", MAGENTA);
-	int x 
 
-	x = x1;
-	while (x <= x2)
-	{
-		mlx_pixel_put(base->mlx, base->win, x, y1+((y2-y1) * (x -x1))/(x2-x1), 0x00FFFFFF);
-		x++;
-	}
+int		get_color(t_base *base, int i)
+{
+			//ft_putendlcolor("get_color()", MAGENTA);	
+	if (!base->d.z)
+		return (0);
+	else
+		return (i);
 }
-*/
 
 /*
 ** Write in the image (kind of pixel_put)
 */
 //y*size+x Demander a Gael l'utilité
-/*
-void	px_img(int *img)
+void	px_img(t_base *base, int *img)
 {
+			ft_putendlcolor("get_px()", MAGENTA);	
 	int	i;
 
 	i = 0;
+	while (i < base->win_size)
+	{
+		img[i] = get_color(base, i);
+		i += base->interval;
+	}
 }
-*/
+
+
+
+
 
 
 //############################################################################################

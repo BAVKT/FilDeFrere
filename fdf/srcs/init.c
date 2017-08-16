@@ -19,13 +19,17 @@
 t_base	init_base(t_base *base)
 {
 			ft_putendlcolor("init_base()", MAGENTA);
-	base->view.vx = base->size[0];
-	base->view.vy = base->size[0];
-	base->view.vz = 1000;
-	base->interval = 20;
 	init_d(base);
+	base->size = base->d.x * base->d.y;
+	base->view.vx = base->size;
+	base->view.vy = base->size;
+	base->view.vz = 1000;
+	base->interval = get_interval(base);
+	base->win_size_x = (base->d.x * base->interval) + (base->interval * 2);
+	base->win_size_y = (base->d.y * base->interval) + (base->interval * 2);
+	base->win_size = base->win_size_x * base->win_size_y;
 	base->mlx = mlx_init();
-	base->win = mlx_new_window(base->mlx, 1000, 1000, "Fil de fer");
+	base->win = mlx_new_window(base->mlx, base->win_size_x, base->win_size_y, "Fil de fer");
 	return (*base);
 }
 
@@ -38,15 +42,28 @@ void		init_d(t_base *base)
 			ft_putendlcolor("init_d()", MAGENTA);
 	char	*str;
 	int		fd;
+	int		j;
 
+	base->d.x = 0;
+	base->d.y = 0;
 	str = ft_strnew(0);
 	fd = open(base->av, O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
 	{
-		get_xyz(&base->d, str);
+		get_xy(base, str);
 		free(str);
 	}
 	close(fd);
+	base->size = base->d.x * base->d.y;
+	base->d.z = (int *)malloc(sizeof(int) * base->size);
+	j = 0;
+	fd = open(base->av, O_RDONLY);
+	while (get_next_line(fd, &str) > 0)
+	{
+		j = get_z(base, str, j);
+		//free(str);
+	}
+	close(fd);		
 }
 
 

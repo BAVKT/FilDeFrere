@@ -24,7 +24,7 @@ void 	conv_xy(t_base *base)
 
 	i = 0;
 	cte = 0.789;
-	while (i < (base->size[0] * base->size[1]))
+	while (i < (base->nblc[0] * base->nblc[1]))
 	{
 		base->d.x2[i] = (base->d.x[i] + cte * base->d.z[i]);
 		base->d.y2[i] = (base->d.y[i] + (cte/2) * base->d.z[i]);

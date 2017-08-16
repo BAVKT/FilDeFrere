@@ -31,18 +31,21 @@ typedef struct 		s_view
 	
 typedef struct 		s_d
 {	
-	double 			*x;
-	double 			*y;
-	double 			*z;
-	double 			*x2;
-	double 			*y2;
+	int 			x;
+	int 			y;
+	int 			*z;
+	int 			*x2;
+	int 			*y2;
 } 					t_d;
 
 typedef struct 		s_base
 {
 	void 			*mlx;
 	void 			*win;
-	int 			*size;
+	int				size;
+	int				win_size_x;
+	int				win_size_y;
+	int				win_size;
 	int 			interval;
 	char			*av;
 	struct	s_d		d;
@@ -54,6 +57,8 @@ void				error_parse(int e);
 void				check_file(char *av);
 t_base				init_base(t_base *base);
 void				init_d(t_base *base);
-void				get_xyz(t_d *d, char *line);
+int					get_interval(t_base *base);
+void 				get_xy(t_base *base, char *line);
+int					get_z(t_base *base, char *line, int j);
 
 #endif
