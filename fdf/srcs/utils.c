@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 22:52:08 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/23 21:46:31 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,42 +50,23 @@ void 	get_xy(t_base *base, char *line)
 /*
 ** Fill the z tab 
 */
-
 int		get_z(t_base *base, char *line, int j)
 {
 			ft_putendlcolor("get_z()", MAGENTA);
 	int		i;
-	int		k;
-	char	*c;
+	char	**c;
 
 	i = 0;
-	c = ft_strnew(8);
-	while (line[i])
-	{
-		k = 0;
-		while (line[i] && !ft_isdigit(line[i]))
-			i++;
-				ft_putendl("yo");
-		base->d.z[j] = (line[i - 1] == '-') ? -1 : 1;
-		while (line[i] && ft_isdigit(line[i]))
-			c[k++] = line[i++];
-		c[k] = '\0';
-			ft_putstr("c = ");
-			ft_putendl(c);
-		base->d.z[j] *= ft_atoi(c);
-			ft_putstr("base->d.z = ");
-			ft_putnbrendl(base->d.z[j]);
-		j++;
-		i++;
-		//free(c);
-	}
+	c = ft_strsplit(line, ' ');
+	while (c[i])
+		base->d.z[j++] = ft_atoi(c[i++]);
 	return (j);
 }
 
 /*
 ** Return the interval according to the win_size and x/y
 */
-// Sertt a rien parce que return 10
+// Sert a rien parce que return 10
 
 int		get_interval(t_base *base)
 {

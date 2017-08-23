@@ -6,68 +6,69 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 22:15:13 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/23 20:15:57 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-//
-// Chaque case du int* img fait 32bits on peut donc stocker 
-// dans chaque case soit en 8 soit en 16 soit en 32bits
-//
-//
-
 /*
 ** Start and fill the image
 */
-/*
+
 void	image(t_base *base)
 {
 			ft_putendlcolor("image()", MAGENTA);
-	int		*img;
-	int		*data;
+	char	*data;
+	t_disp	disp;
 
-	img = (int *)malloc(sizeof(int) * base->size);
-	img = mlx_new_image(base->mlx, base->size[0], base->size[1]);
-	data = mlx_get_data_addr(img, 8, &base->size[0], 0);
+	disp = init_display(base);
+	base->img = mlx_new_image(base->mlx, base->win_x, base->win_y);
+	data = mlx_get_data_addr(base->img, &disp.bpp, &disp.sizeline, &disp.endian);
+	px_img(base, &disp);
+	mlx_put_image_to_window(base->mlx, base->win, base->img, 0, 0);
 }
-*/
 
 /*
 ** Return the color of the pixel
 */
-
-int		get_color(t_base *base, int i)
+/*
+int		get_color(t_base *base, t_disp *disp)
 {
-			//ft_putendlcolor("get_color()", MAGENTA);	
-	if (!base->d.z)
+			ft_putendlcolor("get_color()", MAGENTA);	
+  	int c1;
+  	int c2;
+  	int c3;
+
+ 	c1 = (disp.img_color & 0xFF000000) >> 24;
+ 	c2 = (disp.img_color & 0xFF0000) >> 16;
+ 	c3 = (disp.img_color & 0xFF00) >> 8;
+	if ()
 		return (0);
 	else
-		return (i);
+		return ();
 }
+*/
 
 /*
 ** Write in the image (kind of pixel_put)
 */
-//y*size+x Demander a Gael l'utilité
-void	px_img(t_base *base, int *img)
+void	px_img(t_base *base, t_disp *disp)
 {
 			ft_putendlcolor("get_px()", MAGENTA);	
-	int	i;
+	int		i;
 
 	i = 0;
 	while (i < base->win_size)
 	{
-		img[i] = get_color(base, i);
-		i += base->interval;
+		disp->img_color = mlx_get_color_value(base->mlx, disp->color);
+		if (i % base->interval == 0)
+			base->img[i] = 0xFFFFFFFF;
+		else
+			base->img[i] = 0X00000000;
+		i++;
 	}
 }
-
-
-
-
-
 
 //############################################################################################
 //############################################################################################

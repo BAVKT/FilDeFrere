@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/14 22:42:44 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/23 20:41:50 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,27 +24,28 @@
 //et le z represente la distance approximative entre nous et l'ecran. On va dire 1000.
 typedef struct 		s_view
 {	
-	double 			vx;
-	double 			vy;
-	double 			vz;
+	double			vx;
+	double			vy;
+	double			vz;
 }					t_view;
 	
 typedef struct 		s_d
 {	
-	int 			x;
-	int 			y;
-	int 			*z;
-	int 			*x2;
-	int 			*y2;
+	int				x;
+	int				y;
+	int				*z;
+	int				*x2;
+	int				*y2;
 } 					t_d;
 
 typedef struct 		s_base
 {
 	void 			*mlx;
 	void 			*win;
+	int				*img;		//Stocke les valeurs RGB sur les 8/16/24 bits de chaque case
 	int				size;
-	int				win_size_x;
-	int				win_size_y;
+	int				win_x;
+	int				win_y;
 	int				win_size;
 	int 			interval;
 	char			*av;
@@ -52,13 +53,26 @@ typedef struct 		s_base
 	struct	s_view	view;
 }					t_base;
 
+typedef	struct		s_display
+{
+	int				ofs;		//Offset
+	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
+	int				sizeline;	//La taille d'une ligne
+	int				bpp;
+	int				color;		//La couleur qu'on passe a get_color_value
+	int				img_color;	//Le retour de get_color_value
+}					t_disp;
+
 void				fdf(t_base *base);
 void				error_parse(int e);
 void				check_file(char *av);
 t_base				init_base(t_base *base);
+t_disp				init_display(t_base *base);
 void				init_d(t_base *base);
 int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);
+int					get_color(t_base *base, int i);
+void				px_img(t_base *base, t_disp *disp);
 int					get_z(t_base *base, char *line, int j);
 
 #endif
