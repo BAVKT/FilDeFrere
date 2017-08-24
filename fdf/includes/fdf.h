@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/23 20:41:50 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/24 22:13:53 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ typedef struct 		s_base
 {
 	void 			*mlx;
 	void 			*win;
-	int				*img;		//Stocke les valeurs RGB sur les 8/16/24 bits de chaque case
+	void			*img;		//Stocke les valeurs RGB sur les 8/16/24 bits de chaque case
+	int				*data;
 	int				size;
 	int				win_x;
 	int				win_y;
@@ -74,5 +75,6 @@ void 				get_xy(t_base *base, char *line);
 int					get_color(t_base *base, int i);
 void				px_img(t_base *base, t_disp *disp);
 int					get_z(t_base *base, char *line, int j);
+void				image(t_base *base);
 
 #endif

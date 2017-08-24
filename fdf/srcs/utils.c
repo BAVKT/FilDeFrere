@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/23 21:46:31 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/24 18:44:07 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void 	get_xy(t_base *base, char *line)
 /*
 ** Fill the z tab 
 */
+
 int		get_z(t_base *base, char *line, int j)
 {
 			ft_putendlcolor("get_z()", MAGENTA);

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/23 21:47:42 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/24 22:14:00 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ t_base	init_base(t_base *base)
 	base->view.vy = base->size;
 	base->view.vz = 1000;
 	base->interval = get_interval(base);
-	base->win_x = (base->d.x * base->interval) + base->interval;
-	base->win_y = (base->d.y * base->interval) + base->interval;
+	base->win_x = base->d.x * base->interval + base->interval;
+	base->win_y = base->d.y * base->interval + base->interval;
 	base->win_size = base->win_x * base->win_y;
 	base->mlx = mlx_init();
 	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Fil de fer");
@@ -35,7 +35,7 @@ t_base	init_base(t_base *base)
 }
 
 /*
-** Init the t_d with all the x/y basic AND converted values 
+** Init the t_d with all the x/y basic values 
 */
 
 void		init_d(t_base *base)
@@ -57,9 +57,6 @@ void		init_d(t_base *base)
 	close(fd);
 	base->size = base->d.x * base->d.y;
 	base->d.z = (int *)malloc(sizeof(int) * base->size);
-	ft_putnbrendl(base->d.x);
-	ft_putnbrendl(base->d.y);
-	ft_putnbrendl(base->size);
 	j = 0;
 	fd = open(base->av, O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
@@ -71,11 +68,12 @@ void		init_d(t_base *base)
 }
 
 /*
-** Initialise la struct display
+** Init the display struct
 */
 
 t_disp		init_display(t_base *base)
 {
+			ft_putendlcolor("init_display()", MAGENTA);
 	t_disp	disp;
 
 	disp.ofs = 0;

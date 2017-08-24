@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/23 15:10:56 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/24 17:58:43 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 void	fdf(t_base *base)
 {
 			ft_putendlcolor("FDF()", MAGENTA);
+	image(base);
 	mlx_loop(base->mlx);
 }
 

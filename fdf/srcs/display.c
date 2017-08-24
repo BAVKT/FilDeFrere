@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/23 20:15:57 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/24 22:17:37 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 void	image(t_base *base)
 {
 			ft_putendlcolor("image()", MAGENTA);
-	char	*data;
 	t_disp	disp;
 
 	disp = init_display(base);
 	base->img = mlx_new_image(base->mlx, base->win_x, base->win_y);
-	data = mlx_get_data_addr(base->img, &disp.bpp, &disp.sizeline, &disp.endian);
+	base->data = (int *)mlx_get_data_addr(base->img, &disp.bpp, &disp.sizeline, &disp.endian);
 	px_img(base, &disp);
-	mlx_put_image_to_window(base->mlx, base->win, base->img, 0, 0);
+	mlx_put_image_to_window(base->data, base->win, base->img, 0, 0);
 }
 
 /*
 ** Return the color of the pixel
 */
+
 /*
 int		get_color(t_base *base, t_disp *disp)
 {
@@ -56,24 +56,35 @@ int		get_color(t_base *base, t_disp *disp)
 void	px_img(t_base *base, t_disp *disp)
 {
 			ft_putendlcolor("get_px()", MAGENTA);	
-	int		i;
+	int		x;
+	int		y;
+	int		n;
 
-	i = 0;
-	while (i < base->win_size)
+	disp->ofs = 0;
+	y = 0;
+	n = 0;
+	while (y < base->d.y)
 	{
-		disp->img_color = mlx_get_color_value(base->mlx, disp->color);
-		if (i % base->interval == 0)
-			base->img[i] = 0xFFFFFFFF;
-		else
-			base->img[i] = 0X00000000;
-		i++;
+		x = 0;
+		while (x < base->d.x)
+		{
+			//disp->img_color = mlx_get_color_value(base->mlx, disp->color);
+			if (base->d.z[n + y] != 0)
+			{
+				base->data[y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x] = 0xFFFFFF;
+					ft_putnbrendl(y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x);
+			}
+			x++;
+			n++;
+		}
+		y++;
 	}
 }
 
 //############################################################################################
 //############################################################################################
 //############################################################################################
-
+// pixels[y * width + x] = color
 
 // /*
 // **Troisieme test d'affichage.
