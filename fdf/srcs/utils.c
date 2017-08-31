@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/24 18:44:07 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/31 22:50:45 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,17 @@ int		get_z(t_base *base, char *line, int j)
 	i = 0;
 	c = ft_strsplit(line, ' ');
 	while (c[i])
-		base->d.z[j++] = ft_atoi(c[i++]);
+	{
+		base->d.z[j] = ft_atoi(c[i]);
+		if (base->d.z[j] > base->zmax)
+			base->zmax = base->d.z[j];
+		else if (base->d.z[j] < base->zmin)
+			base->zmin = base->d.z[j];
+		j++;
+		i++;
+	}
+			ft_putnbrendl(base->zmax);
+			ft_putnbrendl(base->zmin);
 	return (j);
 }
 

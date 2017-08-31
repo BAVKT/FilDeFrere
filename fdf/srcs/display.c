@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/24 22:17:37 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/31 22:49:18 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,58 +28,101 @@ void	image(t_base *base)
 	mlx_put_image_to_window(base->data, base->win, base->img, 0, 0);
 }
 
+
 /*
 ** Return the color of the pixel
 */
 
-/*
-int		get_color(t_base *base, t_disp *disp)
+int		get_color(t_base *base, int z)
 {
-			ft_putendlcolor("get_color()", MAGENTA);	
-  	int c1;
-  	int c2;
-  	int c3;
+			ft_putendlcolor("get_color()", MAGENTA);
+	unsigned int	color;
 
- 	c1 = (disp.img_color & 0xFF000000) >> 24;
- 	c2 = (disp.img_color & 0xFF0000) >> 16;
- 	c3 = (disp.img_color & 0xFF00) >> 8;
-	if ()
-		return (0);
-	else
-		return ();
+	ft_putstr("zmax = ");
+	ft_putnbrendl(base->zmax);
+	color = 0xFFFFFF;
+	if (z == 0)
+		color = 0x000000;
+	else if (z > 0)
+		color = 0xFFFFFF * z / base->zmax;
+	else if (z < 0)
+		color = 0xFF0000 * z / base->zmin;
+	return (color);
 }
-*/
+
 
 /*
-** Write in the image (kind of pixel_put)
+** Write in the image (kind of pixel_put for image)
 */
+
 void	px_img(t_base *base, t_disp *disp)
 {
 			ft_putendlcolor("get_px()", MAGENTA);	
 	int		x;
 	int		y;
-	int		n;
+	int		i;
 
 	disp->ofs = 0;
-	y = 0;
-	n = 0;
-	while (y < base->d.y)
+	y = 1;
+	i = 0;
+	while (y <= base->d.y)
 	{
-		x = 0;
-		while (x < base->d.x)
+		x = 1;
+		while (x <= base->d.x)
 		{
 			//disp->img_color = mlx_get_color_value(base->mlx, disp->color);
-			if (base->d.z[n + y] != 0)
-			{
-				base->data[y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x] = 0xFFFFFF;
-					ft_putnbrendl(y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x);
-			}
+			// if (base->d.z[n + y] != 0)
+			// 	base->data[y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x] = 0xFFFFFF;
+			disp->color = get_color(base, base->d.z[i]); 
+			base->data[y * base->win_x * (base->interval) + x * base->interval] = disp->color;
+
 			x++;
-			n++;
+			i++;
 		}
 		y++;
 	}
 }
+
+
+
+// /*
+// ** Write in the image (kind of pixel_put for image)
+// */
+
+// void	px_img(t_base *base, t_disp *disp)
+// {
+// 			ft_putendlcolor("get_px()", MAGENTA);	
+// 	int		x;
+// 	int		y;
+// 	int		i;
+// 	unsigned int color;
+
+// 	disp->ofs = 0;
+// 	y = 1;
+// 	i = 0;
+// 	while (y <= base->d.y)
+// 	{
+// 		x = 1;
+// 		while (x <= base->d.x)
+// 		{
+// 			//disp->img_color = mlx_get_color_value(base->mlx, disp->color);
+// 			// if (base->d.z[n + y] != 0)
+// 			// 	base->data[y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x] = 0xFFFFFF;
+// 			if (base->d.z[i] > 10)
+// 				base->data[y * base->win_x * (base->interval) + x * base->interval] = 0xFFFFFF;
+// 			else if (base->d.z[i] < 0)
+// 				base->data[y * base->win_x * (base->interval) + x * base->interval] = 0xFF0000;
+// 			else
+// 			{
+// 				color = 0xFF * base->d.z[i] / 10;
+// 				base->data[y * base->win_x * (base->interval) + x * base->interval] = color | (color << 8) | (color << 16);
+// 			}
+// 			x++;
+// 			i++;
+// 		}
+// 		y++;
+// 	}
+// }
 
 //############################################################################################
 //############################################################################################

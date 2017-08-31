@@ -14,69 +14,460 @@
 [0m[35mget_xy()
 [0m[35mget_xy()
 [0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mFDF()
+[0m0
+0
+[35mget_z()
+[0m0
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mget_z()
+[0m10
+0
+[35mFDF()
 [0m[35mimage()
 [0m[35minit_display()
 [0m[35mget_px()
-[0m9600
-9620
-9680
-9700
-9780
-9800
-9820
-9840
-9860
-14400
-14460
-14480
-14640
-14660
-14760
-19240
-19260
-19420
-19440
-19540
-19560
-24000
-24020
-24040
-24140
-24160
-24180
-24200
-24340
-24360
-28800
-28820
-28900
-28920
-33600
-33680
-33700
-33960
-38460
-38480
-38500
-38520
-38540
-38560
-48240
-48260
-48280
-48300
-48320
-48340
-48360
+[0m[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10
+[35mget_color()
+[0mzmax = 10

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/24 22:14:00 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/31 22:43:14 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 t_base	init_base(t_base *base)
 {
 			ft_putendlcolor("init_base()", MAGENTA);
+	base->zmax = 0;
+	base->zmin = 0;
 	init_d(base);
 	base->size = base->d.x * base->d.y;
 	base->view.vx = base->size;
@@ -29,13 +31,13 @@ t_base	init_base(t_base *base)
 	base->win_y = base->d.y * base->interval + base->interval;
 	base->win_size = base->win_x * base->win_y;
 	base->mlx = mlx_init();
-	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Fil de fer");
+	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
 	base->img = (int *)malloc(sizeof(int) * base->size * base->interval);
 	return (*base);
 }
 
 /*
-** Init the t_d with all the x/y basic values 
+** Init the t_d with all the x/y basic values
 */
 
 void		init_d(t_base *base)
@@ -64,7 +66,7 @@ void		init_d(t_base *base)
 		j = get_z(base, str, j);
 		//free(str);
 	}
-	close(fd);		
+	close(fd);
 }
 
 /*
@@ -80,7 +82,7 @@ t_disp		init_display(t_base *base)
 	disp.endian = 0;
 	disp.sizeline = base->win_y;
 	disp.bpp = 0;
-	disp.color = 0xFFFFFFFF;
+	disp.color = 0x00FFFFFF;
 	disp.img_color = disp.color;
 	return (disp);
 }

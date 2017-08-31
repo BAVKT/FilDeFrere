@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/24 22:13:53 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/08/31 22:41:27 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ typedef struct 		s_base
 	int				size;
 	int				win_x;
 	int				win_y;
+	int				zmax;
+	int				zmin;
 	int				win_size;
 	int 			interval;
 	char			*av;
@@ -60,7 +62,7 @@ typedef	struct		s_display
 	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
 	int				sizeline;	//La taille d'une ligne
 	int				bpp;
-	int				color;		//La couleur qu'on passe a get_color_value
+	unsigned int	color;		//La couleur qu'on passe a get_color_value
 	int				img_color;	//Le retour de get_color_value
 }					t_disp;
 
@@ -72,7 +74,7 @@ t_disp				init_display(t_base *base);
 void				init_d(t_base *base);
 int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);
-int					get_color(t_base *base, int i);
+int					get_color(t_base *base, int z);
 void				px_img(t_base *base, t_disp *disp);
 int					get_z(t_base *base, char *line, int j);
 void				image(t_base *base);
