@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/31 22:43:14 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/01 16:49:05 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		init_d(t_base *base)
 	base->d.x = 0;
 	base->d.y = 0;
 	str = ft_strnew(0);
-	fd = open(base->av, O_RDONLY);
+	fd = open(base->av[1], O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
 	{
 		get_xy(base, str);
@@ -60,7 +60,7 @@ void		init_d(t_base *base)
 	base->size = base->d.x * base->d.y;
 	base->d.z = (int *)malloc(sizeof(int) * base->size);
 	j = 0;
-	fd = open(base->av, O_RDONLY);
+	fd = open(base->av[1], O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
 	{
 		j = get_z(base, str, j);

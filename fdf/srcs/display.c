@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/31 22:49:18 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/01 16:49:06 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,6 @@ void	image(t_base *base)
 	mlx_put_image_to_window(base->data, base->win, base->img, 0, 0);
 }
 
-
-/*
-** Return the color of the pixel
-*/
-
-int		get_color(t_base *base, int z)
-{
-			ft_putendlcolor("get_color()", MAGENTA);
-	unsigned int	color;
-
-	ft_putstr("zmax = ");
-	ft_putnbrendl(base->zmax);
-	color = 0xFFFFFF;
-	if (z == 0)
-		color = 0x000000;
-	else if (z > 0)
-		color = 0xFFFFFF * z / base->zmax;
-	else if (z < 0)
-		color = 0xFF0000 * z / base->zmin;
-	return (color);
-}
-
-
 /*
 ** Write in the image (kind of pixel_put for image)
 */
@@ -70,12 +47,11 @@ void	px_img(t_base *base, t_disp *disp)
 		x = 1;
 		while (x <= base->d.x)
 		{
-			//disp->img_color = mlx_get_color_value(base->mlx, disp->color);
-			// if (base->d.z[n + y] != 0)
-			// 	base->data[y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x] = 0xFFFFFF;
+				ft_putstr("z0 = ");
+				ft_putnbrendl(base->d.z[i]);
 			disp->color = get_color(base, base->d.z[i]); 
+			// disp->color = green_gradiant(base, base->d.z[i]); 
 			base->data[y * base->win_x * (base->interval) + x * base->interval] = disp->color;
-
 			x++;
 			i++;
 		}

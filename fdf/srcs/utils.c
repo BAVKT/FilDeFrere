@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/08/31 22:50:45 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/01 16:49:04 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int		get_interval(t_base *base)
 		}
 		nb = 2;
 	}
-	return (20);
+	return (5);
 }
 
 
