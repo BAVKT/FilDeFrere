@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/01 16:49:09 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/02 19:55:17 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,10 @@ typedef struct 		s_base
 
 typedef	struct		s_display
 {
+	int				x1;
+	int				y1;
+	int				x2;
+	int				y2;
 	int				ofs;		//Offset
 	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
 	int				sizeline;	//La taille d'une ligne
@@ -72,6 +76,7 @@ void				check_file(char *av);
 t_base				init_base(t_base *base);
 t_disp				init_display(t_base *base);
 void				init_d(t_base *base);
+void 				conv_xy(t_base *base);
 
 int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);
@@ -79,7 +84,10 @@ int					get_z(t_base *base, char *line, int j);
 
 void				fdf(t_base *base);
 void				px_img(t_base *base, t_disp *disp);
+//void				px_img(t_base *base, int i, int x, int y);
 void				image(t_base *base);
+void				draw_line(t_base *base, t_disp *disp);
+void				ft_draw(t_base *base, t_disp *disp);
 
 int					get_color(t_base *base, int z);
 int					red_gradiant(t_base *base, int z);

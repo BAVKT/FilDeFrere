@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/01 16:49:05 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/02 18:57:34 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ t_base	init_base(t_base *base)
 	base->mlx = mlx_init();
 	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
 	base->img = (int *)malloc(sizeof(int) * base->size * base->interval);
+	//conv_xy(base);
 	return (*base);
 }
 
@@ -62,11 +63,10 @@ void		init_d(t_base *base)
 	j = 0;
 	fd = open(base->av[1], O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
-	{
-		j = get_z(base, str, j);
-		//free(str);
-	}
+		j = get_z(base, str, j); //+free() a ajouter
 	close(fd);
+	base->d.x2 = (int *)malloc(sizeof(int) * base->d.x);
+	base->d.y2 = (int *)malloc(sizeof(int) * base->d.y);
 }
 
 /*
@@ -78,6 +78,10 @@ t_disp		init_display(t_base *base)
 			ft_putendlcolor("init_display()", MAGENTA);
 	t_disp	disp;
 
+	disp.x1 = 0;
+	disp.x2 = 1;
+	disp.y1 = 0;
+	disp.y2 = 1;
 	disp.ofs = 0;
 	disp.endian = 0;
 	disp.sizeline = base->win_y;

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/01 16:49:04 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/02 21:10:31 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ int		get_z(t_base *base, char *line, int j)
 		j++;
 		i++;
 	}
-			ft_putnbrendl(base->zmax);
-			ft_putnbrendl(base->zmin);
 	return (j);
 }
 
@@ -81,6 +79,7 @@ int		get_z(t_base *base, char *line, int j)
 
 int		get_interval(t_base *base)
 {
+			ft_putendlcolor("get_interval()", MAGENTA);
 	int nb;
 	int xm;
 	int ym;
@@ -88,19 +87,29 @@ int		get_interval(t_base *base)
 	nb = 0;
 	xm = 2560;
 	ym = 1440;
-	if (base->d.x > xm / 4 || base->d.y > ym / 4)
-		error_parse(5);
-	if (base->d.x < xm / 10 && base->d.y < ym / 10)
-	{
-		if (base->d.x < xm / 50 && base->d.y < ym / 50)
-		{
-			if (base->d.x < xm / 100 && base->d.y < ym / 100)
-				nb = 15;
-			nb = 7;
-		}
-		nb = 2;
-	}
-	return (5);
+	if (base->d.x * 10 > xm || base->d.y * 10 > ym)
+		nb = 5;
+	else if (base->d.x * 10 > xm / 1.5 || base->d.y * 10 > ym / 1.5)
+		nb = 7;
+	else if (base->d.x * 10 > xm / 2 || base->d.y * 10 > ym / 2)
+		nb = 10;
+	else if (base->d.x * 10 > xm / 3 || base->d.y * 10 > ym / 3)
+		nb = 12;
+	else if (base->d.x * 10 > xm / 4 || base->d.y * 10 > ym / 4)
+		nb = 20;
+	else if (base->d.x * 10 > xm / 10 || base->d.y * 10 > ym / 10)
+		nb = 27;
+	else if (base->d.x * 10 > xm / 20 || base->d.y * 10 > ym / 20)
+		nb = 40;
+	else if (base->d.x * 10 > xm / 40 || base->d.y * 10 > ym / 40)
+		nb = 50;
+	else
+		nb = 70;
+
+		ft_putnbrendl(base->d.x);
+		ft_putnbrendl(base->d.y);
+		ft_putnbrendl(nb);
+	return (nb);
 }
 
 

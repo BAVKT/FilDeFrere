@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/01 16:49:06 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/02 20:28:43 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	image(t_base *base)
 
 void	px_img(t_base *base, t_disp *disp)
 {
-			ft_putendlcolor("get_px()", MAGENTA);	
+			ft_putendlcolor("px_img()", MAGENTA);	
 	int		x;
 	int		y;
 	int		i;
@@ -51,134 +51,79 @@ void	px_img(t_base *base, t_disp *disp)
 				ft_putnbrendl(base->d.z[i]);
 			disp->color = get_color(base, base->d.z[i]); 
 			// disp->color = green_gradiant(base, base->d.z[i]); 
+				ft_putendl("preyo");
 			base->data[y * base->win_x * (base->interval) + x * base->interval] = disp->color;
 			x++;
 			i++;
 		}
 		y++;
 	}
+			ft_putendl("end px");
 }
 
+/*
+//from sboudouk
+void	ft_draw(t_base *base, t_disp *disp)
+{
+	int		x;
+	int		y;
 
+	x = 0;
+	y = 0;
+	while (y != base->d.y)	
+	{
+		while (x != base->d.x)
+		{
+			disp->x1 = x;
+			disp->y1 = y;
+			if (x + 1 < base->d.x)
+				draw_line(base, disp);
+			if (y + 1 < base->d.y)
+				draw_line(base, disp);
+			x++;
+		}
+		x = 0;
+		y++;
+	}
+}
 
-// /*
-// ** Write in the image (kind of pixel_put for image)
-// */
+//from sboudouk
+void	draw_line(t_base *base, t_disp *disp)
+{
+	int dx;
+	int dy;
+	int x;
+	int y;
+	int temp;
 
-// void	px_img(t_base *base, t_disp *disp)
-// {
-// 			ft_putendlcolor("get_px()", MAGENTA);	
-// 	int		x;
-// 	int		y;
-// 	int		i;
-// 	unsigned int color;
+	x = disp->x1;
+	y = disp->y1;
+	dx = disp->x2 - disp->x1;
+	dy = disp->y2 - disp->y1;
+	temp = ft_sqrt((dx * dx) + (dy * dy));
+			ft_putstr("temp = ");
+			ft_putnbrendl(temp);
+	if (temp <= 0)
+		return ;
+	dx /= temp;
+	dy /= temp;
+	while (temp >= 0)
+	{
+		px_img(base, 0, x, y);
+		x += dx;
+		y += dy;
+		temp--;
+	}
+}
+*/
 
-// 	disp->ofs = 0;
-// 	y = 1;
-// 	i = 0;
-// 	while (y <= base->d.y)
-// 	{
-// 		x = 1;
-// 		while (x <= base->d.x)
-// 		{
-// 			//disp->img_color = mlx_get_color_value(base->mlx, disp->color);
-// 			// if (base->d.z[n + y] != 0)
-// 			// 	base->data[y * base->win_y * base->win_y / base->d.y + x * base->win_x / base->d.x] = 0xFFFFFF;
-// 			if (base->d.z[i] > 10)
-// 				base->data[y * base->win_x * (base->interval) + x * base->interval] = 0xFFFFFF;
-// 			else if (base->d.z[i] < 0)
-// 				base->data[y * base->win_x * (base->interval) + x * base->interval] = 0xFF0000;
-// 			else
-// 			{
-// 				color = 0xFF * base->d.z[i] / 10;
-// 				base->data[y * base->win_x * (base->interval) + x * base->interval] = color | (color << 8) | (color << 16);
-// 			}
-// 			x++;
-// 			i++;
-// 		}
-// 		y++;
-// 	}
-// }
+/*
+void	px_img(t_base *base, int i, int x, int y)
+{
+			ft_putendlcolor("px_img()", MAGENTA);	
+	unsigned int color;
 
-//############################################################################################
-//############################################################################################
-//############################################################################################
-// pixels[y * width + x] = color
-
-// /*
-// **Troisieme test d'affichage.
-// */
-
-// void 	affpoints(void *win, void *mlx, int *countxy)
-// {
-// 	ft_putendl("affpoints");
-// 	int x;
-// 	int y;
-// 	int i;
-// 	int j;
-// 	int k;
-// 	float interval;
-
-// 	i = 0;
-// 	interval = 20;
-// 	while (i < countxy[0])
-// 	{
-// 		j = 0;
-// 		while (j < countxy[1])
-// 		{
-// 			k = g_D2.x[i];
-// 			while (k++ < g_D2.x[i + 1])
-// 				mlx_pixel_put(mlx, win, g_D2.x[i] * interval, g_D2.y[j] * interval, 0x00FFFFFF);
-// 			j++;
-// 		}
-// 		i++;
-// 	}
-// }
-
-// /*
-// ** Link the points together
-// */
-
-// void	ft_trace()
-// {
-// 	ft_putendl("ft_trace");
-// 	int i;
-// 	int h;
-
-// 	i = 0;
-// 	h = g_A.interval;
-// 	while (i <= g_A.size)
-// 	{
-// 		ft_putendl("BONJOUR");
-// 		ft_ligne(g_D2.x[i] * h, g_D2.y[i] * h, g_D2.x[i + 1] * h, g_D2.y[i + 1] * h);
-// 		i++;
-// 	}
-// }
-
-
-
-
-
-
-// /*
-// // 1
-// void	ft_trace(int size, int interval, void *mlx, void *win)
-// {
-// 	int x;
-// 	int y;
-// 	int i;
-// 	double a;
-// 	double b;
-
-// 	i = 0;
-// 	while (i <= size)
-// 	{
-// 		a = (double)(g_D2.y[i + 1] - g_D2.y[i])/(g_D2.x[i + 1] - g_D2.x[i]);
-// 		b = g_D2.y[i] - a * g_D2.x[i];
-// 		x = g_D2.x[i];
-// 		y = (int)(a * x + b);
-// 		mlx_pixel_put(mlx, win, x * interval, y * interval, 0x00FFFFFF);		
-// 		i++;
-// 	}
-// }
-// */
+	color = get_color(base, base->d.z[i]); 
+	base->data[y * base->win_x * (base->interval) + x * base->interval] = color;
+}
+*/
