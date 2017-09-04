@@ -6,15 +6,14 @@
 #    By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/09/02 16:47:52 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/09/04 20:09:37 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
 SRC = srcs/fdf.c srcs/error.c srcs/display.c srcs/init.c srcs/utils.c \
-		srcs/check.c srcs/colors.c srcs/calculs.c
-
+		srcs/check.c srcs/colors.c srcs/calculs.c srcs/test.c
 INCLUDES = includes
 
 CFLAGS = -Wall -Wextra -Werror -I $(INCLUDES)
@@ -32,6 +31,7 @@ MLX = autre/minilibx_macos/
 all: $(NAME)
 
 $(NAME):$(SRCO)
+	@make -C $(MLX)
 	@make -C libft/
 	@gcc $(FLAGS) $(LIB) -o $(NAME) $(SRC) $(MFLAGS) -I $(INCLUDES)
 

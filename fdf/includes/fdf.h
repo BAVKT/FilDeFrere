@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/02 19:55:17 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/04 19:53:30 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct 		s_view
 	double			vx;
 	double			vy;
 	double			vz;
+	double			zoom;
 }					t_view;
 	
 typedef struct 		s_d
@@ -34,8 +35,8 @@ typedef struct 		s_d
 	int				x;
 	int				y;
 	int				*z;
-	int				*x2;
-	int				*y2;
+	int				x2;
+	int				y2;
 } 					t_d;
 
 typedef struct 		s_base
@@ -54,9 +55,18 @@ typedef struct 		s_base
 	char			**av;
 	struct	s_d		d;
 	struct	s_view	view;
+	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
+	int				sizeline;	//La taille d'une ligne
+	int				bpp;
+	int				x;
+	int				y;
+	int				xi;
+	int				yi;
+	int				xj;
+	int				yj;
 }					t_base;
 
-typedef	struct		s_display
+typedef	struct		s_disp
 {
 	int				x1;
 	int				y1;
@@ -76,7 +86,8 @@ void				check_file(char *av);
 t_base				init_base(t_base *base);
 t_disp				init_display(t_base *base);
 void				init_d(t_base *base);
-void 				conv_xy(t_base *base);
+void 				conv_iso(t_base *base, int x, int y, int z);
+void				conv_para(t_base *base, int x, int y, int z);
 
 int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);

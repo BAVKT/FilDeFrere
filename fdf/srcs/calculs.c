@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/02 18:45:08 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/04 20:15:18 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,25 @@ void 	conv_xy(t_base *base)
 	}
 }
 
-
-void 	conv_xy(t_base *base)
-{
-	int i;
-	int a;
-	int b;
-
-	a = 0;
-	b = 0;
-	i = 0;
-	while (i < base->d.x)
-		base->d.x2[i++] = base->d.x - base->d.y;
-	i = 0;
-	while (i < base->d.y)
-		base->d.y2[i++] = (base->d.x + base->d.y) / 2;
-}
 */
+void 	conv_iso(t_base *base, int x, int y, int z)
+{
+			ft_putendlcolor("conv_iso()", MAGENTA);
+	double cte1;
+	double cte2;
+
+	cte1 = 0.6;
+	cte2 = 0.7;
+	base->d.x2 = cte1 * x - cte2 * y;
+	base->d.y2 = z + cte1 / 2 * x + cte2 / 2 * y;
+}
+
+void	conv_para(t_base *base, int x, int y, int z)
+{
+			ft_putendlcolor("conv_para()", MAGENTA);
+	double cte1;
+
+	cte1 = 0.8;
+	base->d.x2 = x + cte1 * z;
+	base->d.y2 = y + cte1 / 2 * z;
+}

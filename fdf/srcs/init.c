@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/02 18:57:34 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/04 20:15:17 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ void		init_d(t_base *base)
 	while (get_next_line(fd, &str) > 0)
 		j = get_z(base, str, j); //+free() a ajouter
 	close(fd);
-	base->d.x2 = (int *)malloc(sizeof(int) * base->d.x);
-	base->d.y2 = (int *)malloc(sizeof(int) * base->d.y);
 }
 
 /*
@@ -90,9 +88,6 @@ t_disp		init_display(t_base *base)
 	disp.img_color = disp.color;
 	return (disp);
 }
-
-
-
 
 
 

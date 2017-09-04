@@ -6,13 +6,13 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/02 16:25:20 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/04 20:15:19 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <stdio.h>
-
+/*
 void	fdf(t_base *base)
 {
 			ft_putendlcolor("FDF()", MAGENTA);
@@ -37,3 +37,4 @@ int 	main(int ac, char **av)
 	fdf(&base);
 	return (0);
 }
+*/
