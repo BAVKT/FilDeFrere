@@ -6,7 +6,7 @@
 #    By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/09/04 20:09:37 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/09/05 11:00:33 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ LIB = libft/libft.a
 
 MLX = autre/minilibx_macos/
 
-.PHONY: all re clean
+MLX_S = autre/minilibx_macos_sierra/
+
+.PHONY: all re cleans
 
 all: $(NAME)
 

@@ -12,7 +12,7 @@
 
 #include "fdf.h"
 #include <stdio.h>
-/*
+
 void	fdf(t_base *base)
 {
 			ft_putendlcolor("FDF()", MAGENTA);
@@ -37,4 +37,3 @@ int 	main(int ac, char **av)
 	fdf(&base);
 	return (0);
 }
-*/
