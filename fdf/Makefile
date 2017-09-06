@@ -6,14 +6,14 @@
 #    By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 06:27:28 by vmercadi          #+#    #+#              #
-#    Updated: 2017/09/05 11:00:33 by vmercadi         ###   ########.fr        #
+#    Updated: 2017/09/06 16:32:01 by vmercadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
 SRC = srcs/fdf.c srcs/error.c srcs/display.c srcs/init.c srcs/utils.c \
-		srcs/check.c srcs/colors.c srcs/calculs.c srcs/test.c
+		srcs/check.c srcs/colors.c srcs/calculs.c srcs/event.c
 INCLUDES = includes
 
 CFLAGS = -Wall -Wextra -Werror -I $(INCLUDES)

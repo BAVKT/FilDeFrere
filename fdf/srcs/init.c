@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/04 20:15:17 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/06 18:15:20 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,13 @@ t_base	init_base(t_base *base)
 	base->zmin = 0;
 	init_d(base);
 	base->size = base->d.x * base->d.y;
-	base->view.vx = base->size;
-	base->view.vy = base->size;
+	base->view.vx = 0.2;
+	base->view.vy = 0.4;
 	base->view.vz = 1000;
+	base->xi = 0;
+	base->yi = 0;
+	base->xj = 1;
+	base->yj = 1;
 	base->interval = get_interval(base);
 	base->win_x = base->d.x * base->interval + base->interval;
 	base->win_y = base->d.y * base->interval + base->interval;
@@ -33,7 +37,7 @@ t_base	init_base(t_base *base)
 	base->mlx = mlx_init();
 	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
 	base->img = (int *)malloc(sizeof(int) * base->size * base->interval);
-	//conv_xy(base);
+	base->view.zoom = base->win_y * 0.2;
 	return (*base);
 }
 
@@ -76,10 +80,6 @@ t_disp		init_display(t_base *base)
 			ft_putendlcolor("init_display()", MAGENTA);
 	t_disp	disp;
 
-	disp.x1 = 0;
-	disp.x2 = 1;
-	disp.y1 = 0;
-	disp.y2 = 1;
 	disp.ofs = 0;
 	disp.endian = 0;
 	disp.sizeline = base->win_y;

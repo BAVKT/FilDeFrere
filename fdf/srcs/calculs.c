@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/04 20:15:18 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/06 18:36:19 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,54 @@ void 	conv_xy(t_base *base)
 		i++;
 	}
 }
-
 */
-void 	conv_iso(t_base *base, int x, int y, int z)
+
+void 	conv_iso(t_base *base, int x, int y, int i, int n)
 {
 			ft_putendlcolor("conv_iso()", MAGENTA);
-	double cte1;
+	int		xx;
+	int		yy;
+	int		a;
+
+	a = 7;
+	xx = x - base->d.x / 2;
+	yy = y - base->d.y / 2;
+	base->xi = base->view.vx * (xx - yy) * base->view.zoom;
+	base->yi = base->view.vy * (xx + yy) * base->view.zoom;
+	base->yi -= base->d.z[i] * a;
+	if (n)
+	{
+		base->xj = base->view.vx * ((xx + 1) - yy) * base->view.zoom;
+		base->yj = base->view.vy * ((xx + 1) + yy) * base->view.zoom;
+		base->yj -= base->d.z[i + 1] * a;
+	}
+	else
+	{
+		base->xj = base->view.vx * (xx - (yy + 1)) * base->view.zoom;
+		base->yj = base->view.vy * (xx + (yy + 1)) * base->view.zoom;
+		base->yj -= base->d.z[i] * a;
+	}
+	base->xi += base->win_x / 2 - base->d.x / 2;
+	base->xj += base->win_x / 2 - base->d.x / 2;
+	base->yi += base->win_y / 2 - base->d.y / 2;
+	base->yj += base->win_y / 2 - base->d.y / 2;
+
+/*	double cte1;
 	double cte2;
 
 	cte1 = 0.6;
 	cte2 = 0.7;
-	base->d.x2 = cte1 * x - cte2 * y;
-	base->d.y2 = z + cte1 / 2 * x + cte2 / 2 * y;
+	x++;
+	y++;
+	z++;
+
+	base->xi = cte1 * x - cte2 * y;
+	base->yi = z + cte1 / 2 * x + cte2 / 2 * y;
+	base->xj = cte1 * (x + 1) - cte2 * (y + 1);
+	base->yi = z + cte1 / 2 * (x + 1) + cte2 / 2 * (y + 1);
+*/
 }
+
 
 void	conv_para(t_base *base, int x, int y, int z)
 {
@@ -51,6 +86,6 @@ void	conv_para(t_base *base, int x, int y, int z)
 	double cte1;
 
 	cte1 = 0.8;
-	base->d.x2 = x + cte1 * z;
-	base->d.y2 = y + cte1 / 2 * z;
+	base->xi = x + cte1 * z;
+	base->yi = y + cte1 / 2 * z;
 }
