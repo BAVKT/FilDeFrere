@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 16:07:14 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/06 16:26:22 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/07 16:43:05 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 void	move(int k, t_base *base)
 {
 			ft_putendlcolor("move()", MAGENTA);
-		ft_putnbrendl(k);
+				ft_putnbrendl(k);
 	if (k == 0)
 		base->xi -= (base->xi <= 0 ? 0 : 5);
 	else if (k == 1)
@@ -35,8 +35,7 @@ void	move(int k, t_base *base)
 	else if (k == 125)
 		base->yj += (base->yj >= base->win_y ? 0 : 5);
 	else if (k == 126)
-		base->yj -=	(base->yj <= 0 ? 0 : 1);
-		ft_putendl("end move");
+		base->yj -=	(base->yj <= 0 ? 0 : 5);
 }
 
 /*
@@ -49,10 +48,12 @@ void	refresh(t_base *base)
 	int	i;
 
 	i = 0;
-		ft_putnbrendl(base->win_size);
 	while (i < (base->win_size - 1))
 		base->data[i++] = 0;
 	draw(base);
+	//line(base, 0xffffff);
+	//px_img(base, base->xi, base->yi, 0xffffff);
+	//px_img(base, base->xj, base->yj, 0xffffff);
 	mlx_put_image_to_window(base->mlx, base->win, base->img, 0, 0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 17:08:09 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/06 17:00:32 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/07 16:08:54 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	line(t_base *base)
 	dy = base->yj - base->yi;
 	px2img(base, base->x, base->y, 0xffffff);
 	cumul = dx / 2;
-	base->x = base->xi + 1;
+	//base->x = base->xi + 1;
 	while (base->x <= base->xj)
 	{
 		cumul += dy;

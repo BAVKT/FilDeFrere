@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/06 18:18:20 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/07 16:39:18 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ typedef struct 		s_base
 	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
 	int				sizeline;	//La taille d'une ligne
 	int				bpp;
+	int				dx;
+	int				dy;
 	int				x;
 	int				y;
 	int				xi;
@@ -92,8 +94,6 @@ void				image(t_base *base);
 void				draw(t_base *base);
 void				line(t_base *base, int color);
 void				px_img(t_base *base, int x, int y, int color);
-
-
 
 int					get_color(t_base *base, int z);
 int					red_gradiant(t_base *base, int z);

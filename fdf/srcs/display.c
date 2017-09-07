@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/06 18:20:09 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/07 16:46:51 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,37 +35,62 @@ void	px_img(t_base *base, int x, int y, int color)
 		//ft_putendlcolor("px2img()", MAGENTA);
 	if (x > base->win_x || x < 0 || y > base->win_y || y < 0)
 		return ;
-	base->data[y * base->win_y + x] = color;
+	base->data[y * base->win_x + x] = color;
 }
 
 /*
 ** Draw the lines between the 2 points 
 */
 
-void	line(t_base *base, int color)
+void line(t_base *base, int color) 
 {
-			ft_putendlcolor("line()", MAGENTA);
-	int	dx;
-	int	dy;
+	int	i;
+	int	xx;
+	int	yy;
 	int	cumul;
 
-	base->x = base->xi;
-	base->y = base->yi;
-	dx = base->xj - base->xi;
-	dy = base->yj - base->yi;
+	base->x = base->xi * base->interval;
+	base->y = base->yi * base->interval;
+	base->dx = base->xj - base->xi;
+	base->dy = base->yj - base->yi;
+	xx = (base->dx > 0) ? 1 : -1;
+	yy = (base->dy > 0) ? 1 : -1;
+	base->dx = abs(base->dx);
+	base->dy = abs(base->dy);
 	px_img(base, base->x, base->y, color);
-	cumul = dx / 2;
-	base->x = base->xi + 1;
-	while (base->x <= base->xj)
+	if (base->dx > base->dy)
 	{
-		cumul += dy;
-		if (cumul >= dx)
+		i = 1;
+		cumul = base->dx / 2;
+		while (i <= base->dx)
 		{
-			cumul -= dx;
-			base->y += 1;
+			base->x += xx;
+			cumul += base->dy;
+			if (cumul >= base->dx)
+			{
+				cumul -= base->dx;
+				base->y += yy;
+			}
+			i++;
+			px_img(base, base->x, base->y, color);
 		}
-		px_img(base, base->x, base->y, color);
-		base->x++;
+	}
+	else
+	{
+		i = 1;
+		cumul = base->dy / 2;
+		while (i <= base->dy)
+		{
+			base->y += yy;
+			cumul += base->dx;
+			if (cumul >= base->dy) 
+			{
+				cumul -= base->dy;
+				base->x += xx;
+			}
+			px_img(base, base->x, base->y, color);
+			i++;
+		}
 	}
 }
 
@@ -92,12 +117,12 @@ void	draw(t_base *base)
 			base->yi = y;
 			if (x + 1 < base->d.x)
 			{
-				conv_iso(base, x, y, i, 1);
+				//conv_iso(base, x, y, i, 1);
 				line(base, get_color(base, base->d.z[i]));
 			}
 			if (y + 1 < base->d.y)
 			{
-				conv_iso(base, x, y, i, 0);
+				//conv_iso(base, x, y, i, 0);
 				line(base, get_color(base, base->d.z[i]));
 			}
 			i++;

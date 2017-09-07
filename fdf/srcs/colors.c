@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/01 12:22:07 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/06 18:40:07 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/07 16:49:50 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int		get_color(t_base *base, int z)
 {
-			ft_putendlcolor("get_color()", MAGENTA);
+			//ft_putendlcolor("get_color()", MAGENTA);
 	unsigned int	color;
 
 	color = 0;
@@ -32,7 +32,6 @@ int		get_color(t_base *base, int z)
 	color = (ft_strequ(base->av[2], "white") ? get_gradiant(base, z, 0xffffff) : color);
 	color = (ft_strequ(base->av[2], "purple") ? get_gradiant(base, z, 0xAA00FF) : color);
 	color = (ft_strequ(base->av[2], "rainbow") ? get_gradiant(base, z, 0x9933ff) : color);
-			ft_putendl("yooooooooo");
 	return (color);
 }
 
@@ -70,9 +69,7 @@ int		blue_gradiant(t_base *base, int z)
 
 int		get_gradiant(t_base *base, int z, unsigned int color)
 {
-			ft_putendlcolor("get_radiant()", MAGENTA);
-			ft_putstr("z = ");
-			ft_putnbrendl(z);
+			//ft_putendlcolor("get_radiant()", MAGENTA);
 	if (z == 0)
 		return (color);
 	color = color * z / base->zmax;

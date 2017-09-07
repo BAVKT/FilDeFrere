@@ -13,18 +13,6 @@
 [0m[35mget_xy()
 [0m[35mget_xy()
 [0m[35mget_xy()
-[0m[35mget_xy()
-[0m[35mget_xy()
-[0m[35mget_xy()
-[0m[35mget_xy()
-[0m[35mget_xy()
-[0m[35mget_xy()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
-[0m[35mget_z()
 [0m[35mget_z()
 [0m[35mget_z()
 [0m[35mget_z()
@@ -38,3575 +26,2167 @@
 [0m[35mget_z()
 [0m[35mget_z()
 [0m[35mget_interval()
-[0m33
-18
-27
-[35mFDF()
-[0m[35mimage()
+[0m19
+11
+40
+[35mimage()
 [0m[35minit_display()
-[0m[35mpx_img()
-[0mz0 = 0
-[35mget_color()
+[0m[35mFDF()
+[0m[35mdraw()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 5
-[35mget_color()
-[0m[35mget_radiant()
-[0mz = 5
-WaAT
-preyo
-z0 = 0
-[35mget_color()
-[0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
-[0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+[0mz = 10
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-z0 = 0
-[35mget_color()
+yooooooooo
+[35mline()
+[0m[35mconv_iso()
+[0m[35mget_color()
 [0m[35mget_radiant()
 [0mz = 0
-WaAT
-preyo
-end px
+yooooooooo
+[35mline()
+[0m[35mevent()
+[0m[35mevent()
+[0m[35mevent()
+[0m[35mevent()
+[0m[35mevent()
+[0m[35mevent()
+[0m[35mevent()
+[0m[35mevent()
+[0m

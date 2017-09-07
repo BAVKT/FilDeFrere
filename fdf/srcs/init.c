@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/06 18:15:20 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/07 16:42:19 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ t_base	init_base(t_base *base)
 	base->zmin = 0;
 	init_d(base);
 	base->size = base->d.x * base->d.y;
-	base->view.vx = 0.2;
-	base->view.vy = 0.4;
-	base->view.vz = 1000;
 	base->xi = 0;
 	base->yi = 0;
 	base->xj = 1;
@@ -36,7 +33,7 @@ t_base	init_base(t_base *base)
 	base->win_size = base->win_x * base->win_y;
 	base->mlx = mlx_init();
 	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
-	base->img = (int *)malloc(sizeof(int) * base->size * base->interval);
+	base->img = (int *)malloc(sizeof(int) * base->win_size);
 	base->view.zoom = base->win_y * 0.2;
 	return (*base);
 }
