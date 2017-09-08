@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/07 14:53:05 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/08 16:09:54 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,6 @@ int		get_interval(t_base *base)
 		nb = 50;
 	else
 		nb = 70;
-		ft_putnbrendl(base->d.x);
-		ft_putnbrendl(base->d.y);
-		ft_putnbrendl(nb);
 	return (nb);
 }
 

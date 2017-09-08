@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/07 14:53:39 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/08 16:25:16 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 ** Convert the 2D values in 3D values
 */
 /*
-void 	conv_xy(t_base *base)
+void 	conv_xy(t_base *base, int z)
 {
 			ft_putendlcolor("conv_xy()", MAGENTA);
+	
 	int 	i;
 	float 	cte;
 
@@ -30,7 +31,58 @@ void 	conv_xy(t_base *base)
 		base->d.y2[i] = (base->d.y[i] + (cte/2) * base->d.z[i]);
 		i++;
 	}
+
+
 }
+*/
+
+void	conv_iso(t_base *base, int x, int y)
+{
+	int half;
+
+	half = base->interval / 2;
+	base->xi *= base->interval;
+	base->yi *= base->interval;
+	base->xi = (x - y) * half;
+	base->yi = (x + y) * half;
+
+	base->xi = base->xi + 1;
+	base->xj = base->xj + 1;
+	base->xj *= base->interval;
+	base->yj *= base->interval;
+	base->xj = (x - y) * half;
+	base->yj = (x + y) * half;
+}
+/*
+// Basic isometric map to screen is:
+screen.x = (map.x - map.y) * TILE_WIDTH_HALF;
+screen.y = (map.x + map.y) * TILE_HEIGHT_HALF;
+
+// Solve the first equation for map.x
+screen.x == (map.x - map.y) * TILE_WIDTH_HALF
+screen.x / TILE_WIDTH_HALF == map.x - map.y8
+map.x == screen.x / TILE_WIDTH_HALF + map.y
+
+// Solve the second equation for map.y
+screen.y == (map.x + map.y) * TILE_HEIGHT_HALF
+screen.y / TILE_HEIGHT_HALF == map.x + map.y
+map.y == screen.y / TILE_HEIGHT_HALF - map.x
+
+// Replace "map.y" in the first equation with what it equals in the second
+map.x == screen.x / TILE_WIDTH_HALF + map.y
+map.x == screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF - map.x
+2(map.x) == screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF
+map.x == (screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF) /2
+
+// And now do the same for map.y
+map.y == screen.y / TILE_HEIGHT_HALF - (screen.x / TILE_WIDTH_HALF + map.y)
+map.y == screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF) - map.y
+2(map.y) == screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF)
+map.y == (screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF)) /2
+
+// So final actual commands are:
+map.x = (screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF) /2;
+map.y = (screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF)) /2;
 */
 
 /*	double cte1;

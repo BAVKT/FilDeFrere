@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/07 16:39:18 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/08 15:40:34 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ typedef struct 		s_base
 	int				yi;
 	int				xj;
 	int				yj;
+	int				*x2;
+	int				*y2;
 }					t_base;
 
 typedef	struct		s_disp
@@ -82,8 +84,10 @@ void				check_file(char *av);
 t_base				init_base(t_base *base);
 t_disp				init_display(t_base *base);
 void				init_d(t_base *base);
-void 				conv_iso(t_base *base, int x, int y, int z, int n);
+
+void 				conv_iso(t_base *base, int x, int y);
 void				conv_para(t_base *base, int x, int y, int z);
+void 				conv_xy(t_base *base, int z);
 
 int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);

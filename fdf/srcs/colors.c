@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/01 12:22:07 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/07 16:49:50 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/08 15:30:22 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		get_color(t_base *base, int z)
 
 	color = 0;
 	if (!base->av[2])
-		color = get_gradiant(base, z, 0xffffff);
+		color = 0xffffff;//get_gradiant(base, z, 0xffffff);
 	color = (ft_strequ(base->av[2], "yellow") ? get_gradiant(base, z, 0xffff00) : color);
 	color = (ft_strequ(base->av[2], "red") ? get_gradiant(base, z, 0xff0000) : color);
 	color = (ft_strequ(base->av[2], "blue") ? get_gradiant(base, z, 0x000fff) : color);
@@ -72,6 +72,6 @@ int		get_gradiant(t_base *base, int z, unsigned int color)
 			//ft_putendlcolor("get_radiant()", MAGENTA);
 	if (z == 0)
 		return (color);
-	color = color * z / base->zmax;
+		color = color * z / base->zmax;
 	return (color);
 }

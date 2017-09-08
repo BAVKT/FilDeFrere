@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 16:07:14 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/07 16:43:05 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/08 16:09:45 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,21 @@ void	move(int k, t_base *base)
 			ft_putendlcolor("move()", MAGENTA);
 				ft_putnbrendl(k);
 	if (k == 0)
-		base->xi -= (base->xi <= 0 ? 0 : 5);
+		base->xi -= (base->xi <= 0 ? 0 : 1);	
 	else if (k == 1)
-		base->yi +=	(base->yi >= base->win_y ? 0 : 5);
+		base->yi +=	(base->yi >= base->win_y ? 0 : 1);
 	else if (k == 2)
-		base->xi +=	(base->xi >= base->win_x ? 0 : 5);
+		base->xi +=	(base->xi >= base->win_x ? 0 : 1);
 	else if (k == 13)
-		base->yi -= (base->yi <= 0 ? 0 : 5);
+		base->yi -= (base->yi <= 0 ? 0 : 1);
 	else if (k == 123)
-		base->xj -=	(base->xj <= 0 ? 0 : 5);
+		base->xj -=	(base->xj <= 0 ? 0 : 1);
 	else if (k == 124)
-		base->xj += (base->xj >= base->win_x ? 0 : 5);
+		base->xj += (base->xj >= base->win_x ? 0 : 1);
 	else if (k == 125)
-		base->yj += (base->yj >= base->win_y ? 0 : 5);
+		base->yj += (base->yj >= base->win_y ? 0 : 1);
 	else if (k == 126)
-		base->yj -=	(base->yj <= 0 ? 0 : 5);
+		base->yj -=	(base->yj <= 0 ? 0 : 1);
 }
 
 /*

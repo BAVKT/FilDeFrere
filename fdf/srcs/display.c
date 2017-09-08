@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/07 16:46:51 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/08 16:36:04 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ void	image(t_base *base)
 void	px_img(t_base *base, int x, int y, int color)
 {
 		//ft_putendlcolor("px2img()", MAGENTA);
-	if (x > base->win_x || x < 0 || y > base->win_y || y < 0)
+	if (x > base->win_x || x < 0 || y >= base->win_y || y < 0)
 		return ;
 	base->data[y * base->win_x + x] = color;
+
 }
 
 /*
@@ -44,13 +45,18 @@ void	px_img(t_base *base, int x, int y, int color)
 
 void line(t_base *base, int color) 
 {
+			//ft_putendlcolor("line()", MAGENTA);
 	int	i;
 	int	xx;
 	int	yy;
 	int	cumul;
 
-	base->x = base->xi * base->interval;
-	base->y = base->yi * base->interval;
+	base->xi *= base->interval;
+	base->yi *= base->interval;
+	base->xj *= base->interval;
+	base->yj *= base->interval;
+	base->x = base->xi;
+	base->y = base->yi;
 	base->dx = base->xj - base->xi;
 	base->dy = base->yj - base->yi;
 	xx = (base->dx > 0) ? 1 : -1;
@@ -93,6 +99,46 @@ void line(t_base *base, int color)
 		}
 	}
 }
+void	draw2(t_base *base)
+{
+			ft_putendlcolor("draw2()", MAGENTA);
+	int		x;
+	int		y;
+	int		i;
+
+	i = 0;
+	y = 1;
+	while (y < base->d.y)
+	{
+		x = 1;
+		while (x <= base->d.x)
+		{
+			base->xi = x;
+			base->yi = y;
+			base->xj = x;
+			base->yj = y + 1;
+			if (x + 1 <= base->d.x)
+			{	
+				//conv_iso(base, x, y);
+				line(base, get_color(base, base->d.z[i]));
+			}
+			if (y + 1 <= base->d.y)
+			{
+				//conv_iso(base, x, y);
+				line(base, get_color(base, base->d.z[i]));
+			}
+			i++;
+			////conv_iso(base, x * base->interval, y * base->interval, base->d.z[i]);
+			//line(base, get_color(base, base->d.z[i++]));
+			//base->xi++;
+			//base->yi++;
+			//base->xj++;
+			//base->yj++;
+			x++;
+		}
+		y++;
+	}
+}
 
 /*
 ** Draw the map
@@ -110,19 +156,21 @@ void	draw(t_base *base)
 	while (y <= base->d.y)
 	{
 		x = 1;
-		while (x <= base->d.x)
+		while (x < base->d.x)
 		{
 
 			base->xi = x;
 			base->yi = y;
-			if (x + 1 < base->d.x)
-			{
-				//conv_iso(base, x, y, i, 1);
+			base->xj = x + 1;
+			base->yj = y;
+			if (x + 1 <= base->d.x)
+			{	
+				//conv_iso(base, x, y);
 				line(base, get_color(base, base->d.z[i]));
 			}
-			if (y + 1 < base->d.y)
+			if (y + 1 <= base->d.y)
 			{
-				//conv_iso(base, x, y, i, 0);
+				//conv_iso(base, x, y);
 				line(base, get_color(base, base->d.z[i]));
 			}
 			i++;
@@ -136,7 +184,55 @@ void	draw(t_base *base)
 		}
 		y++;
 	}
+	draw2(base);
 }
+
+/*
+void	draw(t_base *base)
+{
+			ft_putendlcolor("draw()", MAGENTA);
+	int		x;
+	int		y;
+	int		i;
+	int		nbi;
+
+	i = 0;
+	y = 1;
+	nbi = base->xi;
+	while (y <= base->d.y)
+	{
+		x = 1;
+		while (x < base->d.x)
+		{
+			base->xi = nbi;
+			base->xj = nbi + 1;
+			if (x + 1 <= base->d.x)
+			{
+			//	conv_xy(base, base->d.z[i]);
+				//conv_iso(base, x, y, i, 1);
+				line(base, get_color(base, base->d.z[i]));
+			}
+			if (y + 1 <= base->d.y)
+			{
+			//	conv_xy(base, base->d.z[i]);
+				//conv_iso(base, x, y, i, 0);
+				line(base, get_color(base, base->d.z[i]));
+			}
+			i++;
+			//conv_iso(base, x * base->interval, y * base->interval, base->d.z[i]);
+			//line(base, get_color(base, base->d.z[i++]));
+			base->xi++;
+			base->xj++;
+			x++;
+		}
+		base->yi++;
+		base->yj++;
+		y++;
+	}
+	//draw2(base);
+}
+*/
+
 
 /*
 ** OLD px
