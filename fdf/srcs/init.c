@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 13:32:19 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 16:59:55 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,21 @@ t_base	init_base(t_base *base)
 	base->yi = 0;
 	base->xj = 1;
 	base->yj = 1;
-	base->interval = get_interval(base);
-	base->win_x = base->d.x * base->interval + base->interval;
-	base->win_y = base->d.y * base->interval + base->interval;
+	base->win_x = 2000;
+	base->win_y = 1200;
+	base->alt = 7;
+	base->view.vx = 0.4;
+	base->view.vy = 0.2;
+	base->interval = (base->win_x * base->win_y) / ((base->d.x * 10) * (base->d.y * 10));
+			ft_putnbrendl(base->d.x);
+			ft_putnbrendl(base->d.y);
+			ft_putnbrendl(base->interval);
+	//base->interval = get_interval(base);
 	base->win_size = base->win_x * base->win_y;
 	base->mlx = mlx_init();
 	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
 	base->img = (int *)malloc(sizeof(int) * base->win_size);
-	base->view.zoom = base->win_y * 0.2;
+	base->view.zoom = 0;
 	return (*base);
 }
 
@@ -81,11 +88,22 @@ t_disp		init_display(t_base *base)
 	disp.endian = 0;
 	disp.sizeline = base->win_y;
 	disp.bpp = 0;
-	disp.color = 0x00FFFFFF;
-	disp.img_color = disp.color;
 	return (disp);
 }
 
+/*
+** Start and fill the image
+*/
+
+void	init_image(t_base *base)
+{
+			ft_putendlcolor("image()", MAGENTA);
+	t_disp	disp;
+
+	disp = init_display(base);
+	base->img = mlx_new_image(base->mlx, base->win_x, base->win_y);
+	base->data = (int*)mlx_get_data_addr(base->img, &disp.bpp, &disp.sizeline, &disp.endian);
+}
 
 
 //############################################################################################

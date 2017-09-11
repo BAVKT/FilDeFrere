@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 16:14:59 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 17:00:04 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 void	fdf(t_base *base)
 {
 			ft_putendlcolor("FDF()", MAGENTA);
-	//px_img(base, base->xi, base->yi, 0xffffff);
-	//line(base, 0xffffff);
-	draw(base);
+	draw_verti(base);
 	mlx_put_image_to_window(base->mlx, base->win, base->img, 0, 0);
 	mlx_hook(base->win, 2, 0, event, base);
 	mlx_loop(base->mlx);
@@ -38,7 +36,7 @@ int 	main(int ac, char **av)
 	base.av = ft_cp_tab(base.av, av);
 	check_file(base.av[1]);
 	base = init_base(&base);
-	image(&base);
+	init_image(&base);
 	fdf(&base);
 	return (0);
 }

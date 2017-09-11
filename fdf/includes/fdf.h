@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 15:40:34 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 17:00:07 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct 		s_base
 	void 			*win;
 	void			*img;		//Stocke les valeurs RGB sur les 8/16/24 bits de chaque case
 	int				*data;
+	int				alt;
 	int				size;
 	int				win_x;
 	int				win_y;
@@ -55,6 +56,7 @@ typedef struct 		s_base
 	struct	s_view	view;
 	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
 	int				sizeline;	//La taille d'une ligne
+	unsigned int	color;		//La couleur qu'on passe a get_color_value
 	int				bpp;
 	int				dx;
 	int				dy;
@@ -74,41 +76,63 @@ typedef	struct		s_disp
 	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
 	int				sizeline;	//La taille d'une ligne
 	int				bpp;
-	unsigned int	color;		//La couleur qu'on passe a get_color_value
 	int				img_color;	//Le retour de get_color_value
 }					t_disp;
 
-void				error_parse(int e);
-void				check_file(char *av);
+/*
+** Inits
+*/
 
 t_base				init_base(t_base *base);
 t_disp				init_display(t_base *base);
 void				init_d(t_base *base);
+void				init_image(t_base *base);
 
-void 				conv_iso(t_base *base, int x, int y);
-void				conv_para(t_base *base, int x, int y, int z);
-void 				conv_xy(t_base *base, int z);
+/*
+** Parsing
+*/
 
+void				error_parse(int e);
+void				check_file(char *av);
 int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);
 int					get_z(t_base *base, char *line, int j);
 
+/*
+** Conv
+*/
+
+void 				conv_iso(t_base *base, int n, int *z, int i);
+//void 				conv_iso(t_base *base, int x, int y);
+void				conv_para(t_base *base, int x, int y, int z);
+void 				conv_xy(t_base *base, int z);
+void				get_pos(t_base *base, int i);
+
+/*
+** Display & drawing
+*/
+
 void				fdf(t_base *base);
-void				image(t_base *base);
-void				draw(t_base *base);
-void				line(t_base *base, int color);
+void				draw_hori(t_base *base);
+void				draw_verti(t_base *base);
+void				start_line(t_base *base);
+void				line1(t_base *base, int xx, int yy);
+void				line2(t_base *base, int xx, int yy);
 void				px_img(t_base *base, int x, int y, int color);
 
-int					get_color(t_base *base, int z);
-int					red_gradiant(t_base *base, int z);
-int					blue_gradiant(t_base *base, int z);
-int					green_gradiant(t_base *base, int z);
-int					yellow_gradiant(t_base *base, int z);
+/*
+** Colors
+*/
+
+void				get_color(t_base *base, int z);
 int					get_gradiant(t_base *base, int z, unsigned int color);
+
+/*
+** Event
+*/
 
 int					event(int keycode, void *param);
 void				move(int k, t_base *base);
 void				refresh(t_base *base);
-
 
 #endif

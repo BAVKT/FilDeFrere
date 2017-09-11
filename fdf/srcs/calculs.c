@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 16:25:16 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 17:00:03 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,28 +31,139 @@ void 	conv_xy(t_base *base, int z)
 		base->d.y2[i] = (base->d.y[i] + (cte/2) * base->d.z[i]);
 		i++;
 	}
-
+	for(i, loop through rows)
+	for(j, loop through columns)
+    x = j * tile width
+    y = i * tile height
+    tileType = levelData[i][j]
+    placetile(tileType, twoDToIso(new Point(x, y)))
 
 }
 */
-
-void	conv_iso(t_base *base, int x, int y)
+/*
+// Iso David
+void			get_pos(t_base *base, int i)
 {
-	int half;
-
-	half = base->interval / 2;
 	base->xi *= base->interval;
 	base->yi *= base->interval;
-	base->xi = (x - y) * half;
-	base->yi = (x + y) * half;
-
-	base->xi = base->xi + 1;
-	base->xj = base->xj + 1;
 	base->xj *= base->interval;
 	base->yj *= base->interval;
-	base->xj = (x - y) * half;
-	base->yj = (x + y) * half;
+	base->xi = (base->view.zoom * (base->xi - base->yi) + (base->win_x / 2)) / 100;
+	base->yi = (base->view.zoom * (base->xi + base->yi) - base->d.z[i] + (base->win_y / 4)) / 100;
+	base->xj = (base->view.zoom * (base->xj - base->yj) + (base->win_x / 2)) / 100;
+	base->yj = (base->view.zoom * (base->xj + base->yj) - base->d.z[i] + (base->win_y / 4)) / 100;
 }
+*/
+// Iso jerem
+void	conv_iso(t_base *base, int n, int *z, int i)
+{
+		// ft_putendl("i");
+		// ft_putnbrendl(base->xi);
+		// ft_putnbrendl(base->yi);
+		// ft_putendl("j");
+		// ft_putnbrendl(base->xi);
+		// ft_putnbrendl(base->yi);
+	//i = z[i];
+	base->x = base->xi - base->d.x / 2;
+	base->y = base->yi - base->d.y / 2;
+	 = base->xi - base->d.x / 2;
+	base->y = base->yi - base->d.y / 2;
+	base->xi = base->view.vx * (base->x - base->y) * base->view.zoom;
+	base->yi = base->view.vy * (base->x + base->y) * base->view.zoom;
+	base->yi -= z[i] * base->interval;
+	if (n)
+	{
+		base->xj = base->view.vx * ((base->x + 1) - base->y) * base->view.zoom;
+		base->yj = base->view.vy * ((base->x + 1) + base->y) * base->view.zoom;
+		base->yj -= z[i + 1] * base->interval;
+	}
+	else
+	{
+		base->xj = base->view.vx * (base->x - (base->y + 1)) * base->view.zoom;
+		base->yj = base->view.vy * (base->x + (base->y + 1)) * base->view.zoom;
+		base->yj -= z[i + base->d.x] * base->interval;
+	}
+	base->xi += base->win_x / 2 - base->d.x / 2;
+	base->xj += base->win_x / 2 - base->d.x / 2;
+	base->yi += base->win_y / 2 - base->d.y / 2;
+	base->yj += base->win_y / 2 - base->d.y / 2;
+		// ft_putendl("i2");
+		// ft_putnbrendl(base->xi);
+		// ft_putnbrendl(base->yi);
+		// ft_putendl("j2");
+		// ft_putnbrendl(base->xi);
+		// ft_putnbrendl(base->yi);
+}
+
+// Iso net
+// void	conv_iso(t_base *base, int x, int y)
+// {
+// 	//int half;
+// 	int xx;
+// 	int yy;
+// 	xx = x + 1;
+// 	yy = y + 1;
+// /*
+// 	x *= base->interval;
+// 	y *= base->interval;
+// 	base->xi = x - y;
+// 	base->yi = (x + y) / 2;
+// 	base->xi = xx - yy;
+// 	base->yi = (xx + yy) / 2;
+//  */
+// 	x = base->d.x / 2;
+//  	base->xi = (2 * y + x) / 2;
+//  	base->yi = (2 * y - x) / 2;
+//  	base->xj = (2 * yy + xx) / 2;
+//  	base->yj = (2 * yy - xx) / 2;
+// 	base->xi *= base->interval;
+// 	base->yi *= base->interval;
+// 	base->xj *= base->interval;
+// 	base->yj *= base->interval;
+
+/*
+// Iso qmundata
+void		get_pos(t_base *base, int i)
+{
+	int xx;
+	int yy; 
+
+	base->x = base->xi * base->interval;
+	base->y = base->yi * base->interval;
+	base->xi = base->x - base->y + (base->win_x * 0.5);
+	base->yi = -base->d.z[i] + (base->x * 0.5) + (base->y * 0.5) + (base->win_y * 0.3);
+	base->xj = xx - yy + (base->win_x * 0.5);
+	base->yj = -base->d.z[i] + (xx * 0.5) + (yy * 0.5) + (base->win_y * 0.3);
+	
+	// else if (win->opt == PARA)
+	// {
+	// 	pt->d2x = rp->px - rp->pz + WIN_W * 0.5;
+	// 	pt->d2y = rp->py + -1 * 0.5 * rp->pz + WIN_H * 0.3;
+
+}
+*/
+/*
+// projection yolo
+void	get_pos(t_base *base, int i)
+{
+	base->xi = (base->win_x / 2) - (base->xi * base->interval) - base->d.z[i];
+	base->yi *= base->interval / 2 - base->d.z[i];
+	base->xi = (base->win_x / 2) - (base->xi + 1 * base->interval) - base->d.z[i];
+	base->yi++;
+	base->yi *= base->interval / 2 - base->d.z[i];
+}
+*/
+
+ 
+//  /*
+// 	half = base->interval / 2;
+// 	base->xi = (x - y) * base->interval;
+// 	base->yi = (x + y) * base->interval;
+
+// 	base->xj = (x + 1 - y + 1) * base->interval;
+// 	base->yj = (x  + 1 + y + 1) * base->interval;
+// */
+// }
 /*
 // Basic isometric map to screen is:
 screen.x = (map.x - map.y) * TILE_WIDTH_HALF;

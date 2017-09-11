@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 16:07:14 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 16:09:45 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 16:59:55 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,21 @@ void	move(int k, t_base *base)
 	else if (k == 124)
 		base->xj += (base->xj >= base->win_x ? 0 : 1);
 	else if (k == 125)
-		base->yj += (base->yj >= base->win_y ? 0 : 1);
+	{
+		base->view.zoom--;		
+	//	base->yj += (base->yj >= base->win_y ? 0 : 1);
+	}
 	else if (k == 126)
-		base->yj -=	(base->yj <= 0 ? 0 : 1);
+	{
+		base->view.zoom++;
+		//base->yj -=	(base->yj <= 0 ? 0 : 1);
+	}
+	else if (k == 78 && base->interval > 0)
+		base->interval -= 1;
+	else if (k == 69 && base->interval < 200)
+		base->interval += 1;
+	ft_putstr("int = ");
+	ft_putnbrendl(base->interval);
 }
 
 /*
@@ -50,10 +62,7 @@ void	refresh(t_base *base)
 	i = 0;
 	while (i < (base->win_size - 1))
 		base->data[i++] = 0;
-	draw(base);
-	//line(base, 0xffffff);
-	//px_img(base, base->xi, base->yi, 0xffffff);
-	//px_img(base, base->xj, base->yj, 0xffffff);
+	draw_verti(base);
 	mlx_put_image_to_window(base->mlx, base->win, base->img, 0, 0);
 }
 
@@ -68,7 +77,8 @@ int		event(int keycode, void *param)
 
 	base = (t_base *)param;
 	if (keycode == 0 || keycode == 1 || keycode == 2 || keycode == 13 || 
-		keycode == 123 || keycode == 124 || keycode == 125 || keycode == 126)
+		keycode == 123 || keycode == 124 || keycode == 125 || keycode == 126 ||
+		keycode == 69 || keycode == 78)
 		move(keycode, base);
 	if (keycode == 53)
 		exit(1);

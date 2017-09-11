@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/01 12:22:07 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 15:30:22 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 16:59:54 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 ** Return the pixel color
 */
 
-int		get_color(t_base *base, int z)
+void		get_color(t_base *base, int z)
 {
 			//ft_putendlcolor("get_color()", MAGENTA);
 	unsigned int	color;
 
-	color = 0;
+	if (z > 0)
+		color = 0xffffff;
 	if (!base->av[2])
 		color = 0xffffff;//get_gradiant(base, z, 0xffffff);
 	color = (ft_strequ(base->av[2], "yellow") ? get_gradiant(base, z, 0xffff00) : color);
@@ -32,35 +33,7 @@ int		get_color(t_base *base, int z)
 	color = (ft_strequ(base->av[2], "white") ? get_gradiant(base, z, 0xffffff) : color);
 	color = (ft_strequ(base->av[2], "purple") ? get_gradiant(base, z, 0xAA00FF) : color);
 	color = (ft_strequ(base->av[2], "rainbow") ? get_gradiant(base, z, 0x9933ff) : color);
-	return (color);
-}
-
-/*
-** Return a beautiful green gradient
-*/
-
-int		green_gradiant(t_base *base, int z)
-{
-	unsigned int	color;
-
-	if (base->zmax == 0)
-		return (0x00ff00);
-	color = 0x00ff00 * z / base->zmax;
-	return (color);
-}
-
-/*
-** Return a beautiful blue gradient
-*/
-
-int		blue_gradiant(t_base *base, int z)
-{
-	unsigned int	color;
-
-	if (base->zmax == 0)
-		return (0x00ffff);
-	color = 0x00ffff * z / base->zmax;
-	return (color | (color >> 8));
+	base->color = color;
 }
 
 /*

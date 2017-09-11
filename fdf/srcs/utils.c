@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/08 16:09:54 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/11 16:59:56 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void 	get_xy(t_base *base, char *line)
 {
-			ft_putendlcolor("get_xy()", MAGENTA);
+			//ft_putendlcolor("get_xy()", MAGENTA);
 	int		i;
 	int		j;
 	char	*c;
@@ -53,7 +53,7 @@ void 	get_xy(t_base *base, char *line)
 
 int		get_z(t_base *base, char *line, int j)
 {
-			ft_putendlcolor("get_z()", MAGENTA);
+			//ft_putendlcolor("get_z()", MAGENTA);
 	int		i;
 	char	**c;
 
@@ -76,7 +76,7 @@ int		get_z(t_base *base, char *line, int j)
 ** Return the interval according to the win_size and x/y
 */
 // Sert a rien parce que return 10
-
+/*
 int		get_interval(t_base *base)
 {
 			ft_putendlcolor("get_interval()", MAGENTA);
@@ -107,8 +107,7 @@ int		get_interval(t_base *base)
 		nb = 70;
 	return (nb);
 }
-
-
+*/
 
 
 
