@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 17:13:06 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 18:15:00 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_base	init_base(t_base *base)
 	base->yj = 1;
 	base->win_x = 2000;
 	base->win_y = 1200;
-	base->alt = 7;
+	base->alt = 2;
 	base->view.vx = 0.4;
 	base->view.vy = 0.2;
 	base->interval = (base->win_x * base->win_y) / ((base->d.x * 10) * (base->d.y * 10));

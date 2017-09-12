@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 16:07:14 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 17:51:25 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 18:15:47 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,15 @@ void	move(int k, t_base *base)
 				ft_putnbrendl(base->view.zoom);
 	}
 	else if (k == 78 && base->interval > -200)
+	{
+		base->alt--;
 		base->interval -= 1;
+	}
 	else if (k == 69 && base->interval < 200)
+	{
+		base->alt++;
 		base->interval += 1;
+	}
 	ft_putstr("interval = ");
 	ft_putnbrendl(base->interval);
 }

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 18:00:36 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 18:19:01 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,18 @@ void	conv_iso(t_base *base, int n, int *z, int i)
 			// ft_putnbrendl(z[i] * base->interval);	
 			// ft_putstr("z + int = ");
 			// ft_putnbrendl(z[i] * base->interval);
-	base->yi -= z[i] * base->interval;
+	base->yi -= z[i] * base->alt;
 	if (n)
 	{
 		base->xj = base->view.vx * ((base->x + 1) - base->y) * base->view.zoom;
 		base->yj = base->view.vy * ((base->x + 1) + base->y) * base->view.zoom;
-		base->yj -= z[i + 1] * base->interval;
+		base->yj -= z[i + 1] * base->alt;
 	}
 	else
 	{
 		base->xj = base->view.vx * (base->x - (base->y + 1)) * base->view.zoom;
 		base->yj = base->view.vy * (base->x + (base->y + 1)) * base->view.zoom;
-		base->yj -= z[i + base->d.x] * base->interval;
+		base->yj -= z[i + base->d.x] * base->alt;
 		// ft_putstr("yj = ");
 		// ft_putnbrendl(base->yj);
 		// ft_putstr("index = ");

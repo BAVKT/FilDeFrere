@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 18:10:43 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 18:21:38 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,7 +156,7 @@ void	draw_verti(t_base *base)
 			base->yj = y + 1;
 			get_color(base, base->d.z[i]);
 			conv_iso(base, 1, base->d.z, i);
-			if (x + 1 <= base->d.x)
+			if (x + 1 < base->d.x)
 				start_line(base);
 			i++;
 			x++;
