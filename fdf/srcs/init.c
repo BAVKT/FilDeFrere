@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 14:11:04 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 17:13:06 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_base	init_base(t_base *base)
 	base->view.vy = 0.2;
 	base->interval = (base->win_x * base->win_y) / ((base->d.x * 10) * (base->d.y * 10));
 	if (base->interval > 200)
-		base->interval /= (base->interval / 10);
+		base->interval /= (base->interval / 2);
 			ft_putnbrendl(base->d.x);
 			ft_putnbrendl(base->d.y);
 			ft_putnbrendl(base->interval);
@@ -74,6 +74,7 @@ void		init_d(t_base *base)
 	fd = open(base->av[1], O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
 		j = get_z(base, str, j); //+free() a ajouter
+		base->d.z[j] = 0;
 	close(fd);
 }
 

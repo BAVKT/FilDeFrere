@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/11 17:00:04 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 16:40:59 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 void	fdf(t_base *base)
 {
 			ft_putendlcolor("FDF()", MAGENTA);
+	draw_verti(base);
 	draw_verti(base);
 	mlx_put_image_to_window(base->mlx, base->win, base->img, 0, 0);
 	mlx_hook(base->win, 2, 0, event, base);

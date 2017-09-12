@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/11 16:59:56 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 17:01:13 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ int		get_z(t_base *base, char *line, int j)
 		j++;
 		i++;
 	}
+	ft_putstr("j = ");
+	ft_putnbrendl(j);
 	return (j);
 }
 

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 14:05:41 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 18:00:36 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,12 @@ void	conv_iso(t_base *base, int n, int *z, int i)
 		base->xj = base->view.vx * (base->x - (base->y + 1)) * base->view.zoom;
 		base->yj = base->view.vy * (base->x + (base->y + 1)) * base->view.zoom;
 		base->yj -= z[i + base->d.x] * base->interval;
+		// ft_putstr("yj = ");
+		// ft_putnbrendl(base->yj);
+		// ft_putstr("index = ");
+		// ft_putnbrendl(i + base->d.x - base->x);
+		// ft_putstr("d.x * d.y = ");
+		// ft_putnbrendl(base->d.x * base->d.y);
 	}
 	base->xi += base->win_x / 2 - base->d.x / 2;
 	base->xj += base->win_x / 2 - base->d.x / 2;

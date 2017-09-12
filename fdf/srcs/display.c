@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 14:41:16 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 18:10:43 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,14 @@ void	start_line(t_base *base)
 			//ft_putendlcolor("line2()", MAGENTA);
 	int	xx;
 	int	yy;
-
+		// ft_putstr("xi = ");
+		// ft_putnbrendl(base->xi);
+		// ft_putstr("yi = ");
+		// ft_putnbrendl(base->yi);
+		// ft_putstr("xj = ");
+		// ft_putnbrendl(base->xj);
+		// ft_putstr("yj = ");
+		// ft_putnbrendl(base->yj);
 	//base->xi *= base->interval;
 	//base->yi *= base->interval;
 	//base->xj *= base->interval;
@@ -109,21 +116,19 @@ void	draw_hori(t_base *base)
 
 	i = 0;
 	y = 0;
-	while (y < base->d.y)
+	while (y < base->d.y - 1)
 	{
 		x = 0;
-		while (x <= base->d.x - 1)
+		while (x < base->d.x)
 		{
 			base->xi = x;
 			base->yi = y;
 			base->xj = x + 1;
 			base->yj = y + 1;
 			get_color(base, base->d.z[i]);
-			// get_pos(base, i);
 			conv_iso(base, 0, base->d.z, i);
 			if (x + 1 <= base->d.x)
 				start_line(base);
-				// px_img(base, base->xi * base->interval, base->yi * base->interval, base->color);
 			i++;
 			x++;
 		}
@@ -140,7 +145,7 @@ void	draw_verti(t_base *base)
 
 	i = 0;
 	y = 0;
-	while (y <= base->d.y - 1)
+	while (y < base->d.y)
 	{
 		x = 0;
 		while (x < base->d.x)
@@ -150,11 +155,9 @@ void	draw_verti(t_base *base)
 			base->xj = x + 1;
 			base->yj = y + 1;
 			get_color(base, base->d.z[i]);
-			// get_pos(base, i);
 			conv_iso(base, 1, base->d.z, i);
 			if (x + 1 <= base->d.x)
 				start_line(base);
-				// px_img(base, base->xi * base->interval, base->yi * base->interval, base->color);
 			i++;
 			x++;
 		}
