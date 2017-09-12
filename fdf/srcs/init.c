@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/11 16:59:55 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 14:11:04 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ t_base	init_base(t_base *base)
 	base->view.vx = 0.4;
 	base->view.vy = 0.2;
 	base->interval = (base->win_x * base->win_y) / ((base->d.x * 10) * (base->d.y * 10));
+	if (base->interval > 200)
+		base->interval /= (base->interval / 10);
 			ft_putnbrendl(base->d.x);
 			ft_putnbrendl(base->d.y);
 			ft_putnbrendl(base->interval);
@@ -41,7 +43,7 @@ t_base	init_base(t_base *base)
 	base->mlx = mlx_init();
 	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
 	base->img = (int *)malloc(sizeof(int) * base->win_size);
-	base->view.zoom = 0;
+	base->view.zoom = 2;
 	return (*base);
 }
 

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:43:13 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/11 17:00:03 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 14:05:41 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,14 @@ void	conv_iso(t_base *base, int n, int *z, int i)
 	//i = z[i];
 	base->x = base->xi - base->d.x / 2;
 	base->y = base->yi - base->d.y / 2;
-	 = base->xi - base->d.x / 2;
-	base->y = base->yi - base->d.y / 2;
 	base->xi = base->view.vx * (base->x - base->y) * base->view.zoom;
 	base->yi = base->view.vy * (base->x + base->y) * base->view.zoom;
+			// ft_putstr("z = ");
+			// ft_putnbrendl(z[i] * base->interval);
+			// ft_putstr("int = ");
+			// ft_putnbrendl(z[i] * base->interval);	
+			// ft_putstr("z + int = ");
+			// ft_putnbrendl(z[i] * base->interval);
 	base->yi -= z[i] * base->interval;
 	if (n)
 	{

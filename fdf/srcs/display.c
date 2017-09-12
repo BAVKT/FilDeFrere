@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/11 17:00:03 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 14:41:16 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	px_img(t_base *base, int x, int y, int color)
 	if (x > base->win_x || x < 0 || y >= base->win_y || y < 0)
 		return ;
 	base->data[y * base->win_x + x] = color;
+	//ft_putnbrendl(y * base->win_x + x);
 
 }
 
@@ -101,17 +102,17 @@ void	line2(t_base *base, int xx, int yy)
 
 void	draw_hori(t_base *base)
 {
-			//ft_putendlcolor("draw2()", MAGENTA);
+			//ft_putendlcolor("draw_hori()", MAGENTA);
 	int		x;
 	int		y;
 	int		i;
 
 	i = 0;
-	y = 1;
+	y = 0;
 	while (y < base->d.y)
 	{
-		x = 1;
-		while (x <= base->d.x)
+		x = 0;
+		while (x <= base->d.x - 1)
 		{
 			base->xi = x;
 			base->yi = y;
@@ -132,22 +133,22 @@ void	draw_hori(t_base *base)
 
 void	draw_verti(t_base *base)
 {
-			//ft_putendlcolor("draw()", MAGENTA);
+			//ft_putendlcolor("draw_verti()", MAGENTA);
 	int		x;
 	int		y;
 	int		i;
 
 	i = 0;
-	y = 1;
-	while (y <= base->d.y)
+	y = 0;
+	while (y <= base->d.y - 1)
 	{
-		x = 1;
+		x = 0;
 		while (x < base->d.x)
 		{
 			base->xi = x;
 			base->yi = y;
 			base->xj = x + 1;
-			base->yj = y;
+			base->yj = y + 1;
 			get_color(base, base->d.z[i]);
 			// get_pos(base, i);
 			conv_iso(base, 1, base->d.z, i);

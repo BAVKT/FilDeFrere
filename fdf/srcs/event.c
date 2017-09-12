@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 16:07:14 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/11 16:59:55 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/12 14:00:54 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ void	move(int k, t_base *base)
 		base->xj += (base->xj >= base->win_x ? 0 : 1);
 	else if (k == 125)
 	{
+
 		base->view.zoom--;		
+				ft_putnbrendl(base->view.zoom);
 	//	base->yj += (base->yj >= base->win_y ? 0 : 1);
 	}
 	else if (k == 126)
@@ -42,11 +44,11 @@ void	move(int k, t_base *base)
 		base->view.zoom++;
 		//base->yj -=	(base->yj <= 0 ? 0 : 1);
 	}
-	else if (k == 78 && base->interval > 0)
+	else if (k == 78 && base->interval > -200)
 		base->interval -= 1;
 	else if (k == 69 && base->interval < 200)
 		base->interval += 1;
-	ft_putstr("int = ");
+	ft_putstr("interval = ");
 	ft_putnbrendl(base->interval);
 }
 
