@@ -6,25 +6,73 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 18:21:38 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 20:59:43 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-
 /*
-** Write the pixel in the mage
+** Draw the horizontals lines
 */
 
-void	px_img(t_base *base, int x, int y, int color)
+void	draw_hori(t_base *base)
 {
-		//ft_putendlcolor("px2img()", MAGENTA);
-	if (x > base->win_x || x < 0 || y >= base->win_y || y < 0)
-		return ;
-	base->data[y * base->win_x + x] = color;
-	//ft_putnbrendl(y * base->win_x + x);
+	int		x;
+	int		y;
+	int		i;
 
+	i = 0;
+	y = 0;
+	while (y < base->d.y - 1)
+	{
+		x = 0;
+		while (x < base->d.x)
+		{
+			base->xi = x - base->leftright  + base->updown;
+			base->yi = y + base->updown + base->leftright;
+			base->xj = x - base->leftright  + base->updown + 1;
+			base->yj = y + base->updown + base->leftright + 1;
+			conv_iso(base, 0, base->d.z, i);
+			if (x + 1 <= base->d.x)
+				start_line(base);
+			i++;
+			x++;
+		}
+		y++;
+	}
+}
+
+/*
+** Draw the verticals lines
+*/
+
+void	draw_verti(t_base *base)
+{
+	int		x;
+	int		y;
+	int		i;
+
+	i = 0;
+	y = 0;
+	while (y < base->d.y)
+	{
+		x = 0;
+		while (x < base->d.x)
+		{
+			base->xi = x - base->leftright  + base->updown;
+			base->yi = y + base->updown + base->leftright;
+			base->xj = x - base->leftright  + base->updown + 1;
+			base->yj = y + base->updown + base->leftright + 1;
+			conv_iso(base, 1, base->d.z, i);
+			if (x + 1 < base->d.x)
+				start_line(base);
+			i++;
+			x++;
+		}
+		y++;
+	}
+	draw_hori(base);
 }
 
 /*
@@ -33,21 +81,9 @@ void	px_img(t_base *base, int x, int y, int color)
 
 void	start_line(t_base *base)
 {
-			//ft_putendlcolor("line2()", MAGENTA);
 	int	xx;
 	int	yy;
-		// ft_putstr("xi = ");
-		// ft_putnbrendl(base->xi);
-		// ft_putstr("yi = ");
-		// ft_putnbrendl(base->yi);
-		// ft_putstr("xj = ");
-		// ft_putnbrendl(base->xj);
-		// ft_putstr("yj = ");
-		// ft_putnbrendl(base->yj);
-	//base->xi *= base->interval;
-	//base->yi *= base->interval;
-	//base->xj *= base->interval;
-	//base->yj *= base->interval;
+
 	base->x = base->xi;
 	base->y = base->yi;
 	base->dx = base->xj - base->xi;
@@ -65,7 +101,6 @@ void	start_line(t_base *base)
 
 void line1(t_base *base, int xx, int yy) 
 {
-			//ft_putendlcolor("line1()", MAGENTA);
 	int	i;
 	int cumul;
 
@@ -87,7 +122,6 @@ void line1(t_base *base, int xx, int yy)
 
 void	line2(t_base *base, int xx, int yy)
 {
-			//ft_putendlcolor("line2()", MAGENTA);
 	int	i;
 	int cumul;
 
@@ -106,108 +140,3 @@ void	line2(t_base *base, int xx, int yy)
 		i++;
 	}
 }
-
-void	draw_hori(t_base *base)
-{
-			//ft_putendlcolor("draw_hori()", MAGENTA);
-	int		x;
-	int		y;
-	int		i;
-
-	i = 0;
-	y = 0;
-	while (y < base->d.y - 1)
-	{
-		x = 0;
-		while (x < base->d.x)
-		{
-			base->xi = x;
-			base->yi = y;
-			base->xj = x + 1;
-			base->yj = y + 1;
-			get_color(base, base->d.z[i]);
-			conv_iso(base, 0, base->d.z, i);
-			if (x + 1 <= base->d.x)
-				start_line(base);
-			i++;
-			x++;
-		}
-		y++;
-	}
-}
-
-void	draw_verti(t_base *base)
-{
-			//ft_putendlcolor("draw_verti()", MAGENTA);
-	int		x;
-	int		y;
-	int		i;
-
-	i = 0;
-	y = 0;
-	while (y < base->d.y)
-	{
-		x = 0;
-		while (x < base->d.x)
-		{
-			base->xi = x;
-			base->yi = y;
-			base->xj = x + 1;
-			base->yj = y + 1;
-			get_color(base, base->d.z[i]);
-			conv_iso(base, 1, base->d.z, i);
-			if (x + 1 < base->d.x)
-				start_line(base);
-			i++;
-			x++;
-		}
-		y++;
-	}
-	draw_hori(base);
-}
-
-/*
-void	draw(t_base *base)
-{
-			ft_putendlcolor("draw()", MAGENTA);
-	int		x;
-	int		y;
-	int		i;
-	int		nbi;
-
-	i = 0;
-	y = 1;
-	nbi = base->xi;
-	while (y <= base->d.y)
-	{
-		x = 1;
-		while (x < base->d.x)
-		{
-			base->xi = nbi;
-			base->xj = nbi + 1;
-			if (x + 1 <= base->d.x)
-			{
-			//	conv_xy(base, base->d.z[i]);
-				//conv_iso(base, x, y, i, 1);
-				line(base, get_color(base, base->d.z[i]));
-			}
-			if (y + 1 <= base->d.y)
-			{
-			//	conv_xy(base, base->d.z[i]);
-				//conv_iso(base, x, y, i, 0);
-				line(base, get_color(base, base->d.z[i]));
-			}
-			i++;
-			//conv_iso(base, x * base->interval, y * base->interval, base->d.z[i]);
-			//line(base, get_color(base, base->d.z[i++]));
-			base->xi++;
-			base->xj++;
-			x++;
-		}
-		base->yi++;
-		base->yj++;
-		y++;
-	}
-	//draw2(base);
-}
-*/

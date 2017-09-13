@@ -6,187 +6,72 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/12 17:01:13 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 20:59:47 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-/*
-** Get the x & y values 
-*/
-
-void 	get_xy(t_base *base, char *line)
-{
-			//ft_putendlcolor("get_xy()", MAGENTA);
-	int		i;
-	int		j;
-	char	*c;
-
-	i = 0;
-	j = 0;
-	c = ft_strnew(8);
-	while (line[i])
-	{
-		while (line[i] && !ft_isdigit(line[i]))
-			i++;
-		while (line[i] && ft_isdigit(line[i]))
-			i++;
-		j++;
-	}
-	i = 0;
-	while (line[i])
-	{
-		if (ft_isdigit(line[i++]))
-		{
-			base->d.y++;
-			break ;
-		}
-	}
-	base->d.x = (j > base->d.x) ? j : base->d.x;
-}
-
 
 /*
-** Fill the z tab 
+** Write the pixel in the image
 */
 
-int		get_z(t_base *base, char *line, int j)
+void	px_img(t_base *base, int x, int y, int color)
 {
-			//ft_putendlcolor("get_z()", MAGENTA);
-	int		i;
-	char	**c;
-
-	i = 0;
-	c = ft_strsplit(line, ' ');
-	while (c[i])
-	{
-		base->d.z[j] = ft_atoi(c[i]);
-		if (base->d.z[j] > base->zmax)
-			base->zmax = base->d.z[j];
-		else if (base->d.z[j] < base->zmin)
-			base->zmin = base->d.z[j];
-		j++;
-		i++;
-	}
-	ft_putstr("j = ");
-	ft_putnbrendl(j);
-	return (j);
+	if (x > base->win_x || x < 0 || y > base->win_y || y < 0)
+		return ;
+	base->data[y * base->win_x + x] = color;
 }
 
 /*
-** Return the interval according to the win_size and x/y
+** All the parsing & args errors
 */
-// Sert a rien parce que return 10
-/*
-int		get_interval(t_base *base)
-{
-			ft_putendlcolor("get_interval()", MAGENTA);
-	int nb;
-	int xm;
-	int ym;
 
-	nb = 0;
-	xm = 2560;
-	ym = 1440;
-	if (base->d.x * 10 > xm || base->d.y * 10 > ym)
-		nb = 5;
-	else if (base->d.x * 10 > xm / 1.5 || base->d.y * 10 > ym / 1.5)
-		nb = 7;
-	else if (base->d.x * 10 > xm / 2 || base->d.y * 10 > ym / 2)
-		nb = 10;
-	else if (base->d.x * 10 > xm / 3 || base->d.y * 10 > ym / 3)
-		nb = 12;
-	else if (base->d.x * 10 > xm / 4 || base->d.y * 10 > ym / 4)
-		nb = 20;
-	else if (base->d.x * 10 > xm / 10 || base->d.y * 10 > ym / 10)
-		nb = 27;
-	else if (base->d.x * 10 > xm / 20 || base->d.y * 10 > ym / 20)
-		nb = 40;
-	else if (base->d.x * 10 > xm / 40 || base->d.y * 10 > ym / 40)
-		nb = 50;
+void	error(int e)
+{
+	ft_putstr("Error: ");
+	if (e == -1)
+		ft_putendlcolor("Usage: ./fdf map.fdf", GREEN);
+	else if (e == 1)
+		ft_putstr_fd("Too much arguments.", 2);
+	else if (e == 2)
+		ft_putstr_fd("A map is needed as argument.", 2);
+	else if (e == 3)
+		ft_putstr_fd("File is empty or doesn't exist.", 2);
+	else if (e == 4)
+		ft_putstr_fd("Map contain somes wrong char.", 2);
+	else if (e == 5)
+		ft_putstr_fd("Argument given is not a file.", 2);
+	exit(0);
+}
+
+/*
+** Isometric conversion of the 3D points to 2D points
+*/
+
+void	conv_iso(t_base *base, int n, int *z, int i)
+{
+	
+	base->x = base->xi - base->d.x / 2;
+	base->y = base->yi - base->d.y / 2;
+	base->xi = base->view.vx * (base->x - base->y) * base->view.zoom;
+	base->yi = base->view.vy * (base->x + base->y) * base->view.zoom;
+	base->yi -= z[i] * base->alt;
+	if (n)
+	{
+		base->xj = base->view.vx * ((base->x + 1) - base->y) * base->view.zoom;
+		base->yj = base->view.vy * ((base->x + 1) + base->y) * base->view.zoom;
+		base->yj -= z[i + 1] * base->alt;
+	}
 	else
-		nb = 70;
-	return (nb);
+	{
+		base->xj = base->view.vx * (base->x - (base->y + 1)) * base->view.zoom;
+		base->yj = base->view.vy * (base->x + (base->y + 1)) * base->view.zoom;
+		base->yj -= z[i + base->d.x] * base->alt;
+	}
+	base->xi += base->win_x / 2 - base->d.x / 2;
+	base->xj += base->win_x / 2 - base->d.x / 2;
+	base->yi += base->win_y / 2 - base->d.y / 2;
+	base->yj += base->win_y / 2 - base->d.y / 2;
 }
-*/
-
-
-
-
-
-
-//############################################################################################
-//############################################################################################
-//############################################################################################
-
-// /*
-// ** Rempli le tableau de valeurs 3D en x et renvoi le tableau rempli.
-// */
-// //Fuionner les 2 voir les 3 et utiliser ft_range 
-
-// void 	ft_rempx(int x, int y)
-// {
-// 	ft_putendl("rempx");
-// 	int 	i;
-// 	int 	j;
-// 	int 	k;
-
-// 	i = 0;
-// 	j = 0;
-// 	k = 1;
-// 	while (j <= x * y)
-// 	{
-// 		if (k == x + 1)
-// 			k = 1;
-// 		g_D3.x[i++] = k++;
-// 		j++;
-// 	}
-// }
-
-
-// /*
-// ** Fill the Y tab
-// */
-
-// void 	ft_rempy(int y, int x)
-// {
-// 	ft_putendl("rempy");
-// 	int 	i;
-// 	int 	j;
-// 	int 	k;
-
-// 	i = 0;
-// 	j = 0;
-// 	k = 1;
-// 	while (j <= y * x)
-// 	{
-// 		if (k == y + 1)
-// 			k = 1;
-// 		g_D3.y[i++] = k++;
-// 		j++;
-// 	}
-// }
-
-// /*
-// ** Fill the Z tab
-// */
-
-// void 	ft_rempz(char *buf, int fd)
-// {
-// 	ft_putendl("rempz");
-// 	int 	end;
-// 	char 	**tabc;		//Le retour de strsplit, double tableau de char
-// 	int 	i;
-// 	int 	j;
-
-// 	j = 0;
-// 	while ((end = read(fd, buf, SIZE)) > 0)
-// 	{
-// 		i = 0;
-// 		buf[end] = '\0';
-// 		tabc = ft_strsplit((const char *)buf, ' ');			
-// 		while (tabc[i])
-// 			g_D3.z[j++] = ft_atoi(tabc[i++]); 	//On converti le resultat dans le tableau.
-// 	}
-// }
