@@ -6,12 +6,11 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 20:57:47 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 21:23:47 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 /*
 ** Start the computing and drawing of the fdf
@@ -27,19 +26,22 @@ void	fdf(t_base *base)
 }
 
 /*
-** Print the on the window
+** Print the UI on the window
 */
 
 void	ui(t_base *base)
 {
+	int w;
+
+	w = 0xffffff;
 	mlx_string_put(base->mlx, base->win, 50, 20, 0x00ff00, "    - KEYS -");
-	mlx_string_put(base->mlx, base->win, 50, 50, 0xfffffff, "Move   =  Arrows");
-	mlx_string_put(base->mlx, base->win, 50, 70, 0xfffffff, "Colors =  NumPad");
-	mlx_string_put(base->mlx, base->win, 50, 90, 0xfffffff, "Zoom  =  +  &  -");	
-	mlx_string_put(base->mlx, base->win, 50, 110, 0xfffffff, "Depth =  <  &  >");
+	mlx_string_put(base->mlx, base->win, 50, 50, w, "Move   =  Arrows");
+	mlx_string_put(base->mlx, base->win, 50, 70, w, "Colors =  NumPad");
+	mlx_string_put(base->mlx, base->win, 50, 90, w, "Zoom  =  +  &  -");
+	mlx_string_put(base->mlx, base->win, 50, 110, w, "Depth =  <  &  >");
 }
 
-int 	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_base	base;
 

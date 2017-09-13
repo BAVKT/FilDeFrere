@@ -6,12 +6,11 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 20:59:47 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 21:28:21 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
 
 /*
 ** Write the pixel in the image
@@ -50,25 +49,24 @@ void	error(int e)
 ** Isometric conversion of the 3D points to 2D points
 */
 
-void	conv_iso(t_base *base, int n, int *z, int i)
+void	conv_iso(t_base *base, int n, int i)
 {
-	
 	base->x = base->xi - base->d.x / 2;
 	base->y = base->yi - base->d.y / 2;
 	base->xi = base->view.vx * (base->x - base->y) * base->view.zoom;
 	base->yi = base->view.vy * (base->x + base->y) * base->view.zoom;
-	base->yi -= z[i] * base->alt;
+	base->yi -= base->d.z[i] * base->alt;
 	if (n)
 	{
 		base->xj = base->view.vx * ((base->x + 1) - base->y) * base->view.zoom;
 		base->yj = base->view.vy * ((base->x + 1) + base->y) * base->view.zoom;
-		base->yj -= z[i + 1] * base->alt;
+		base->yj -= base->d.z[i + 1] * base->alt;
 	}
 	else
 	{
 		base->xj = base->view.vx * (base->x - (base->y + 1)) * base->view.zoom;
 		base->yj = base->view.vy * (base->x + (base->y + 1)) * base->view.zoom;
-		base->yj -= z[i + base->d.x] * base->alt;
+		base->yj -= base->d.z[i + base->d.x] * base->alt;
 	}
 	base->xi += base->win_x / 2 - base->d.x / 2;
 	base->xj += base->win_x / 2 - base->d.x / 2;

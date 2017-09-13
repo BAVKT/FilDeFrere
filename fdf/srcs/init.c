@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:44:22 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 20:58:43 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 21:28:58 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_base	init_base(t_base *base)
 	base->zmin = 0;
 	init_d(base);
 	if (!base->d.x || !base->d.y)
-	 	error(3);
+		error(3);
 	base->size = base->d.x * base->d.y;
 	base->win_x = 2000;
 	base->win_y = 1200;
@@ -30,18 +30,16 @@ t_base	init_base(t_base *base)
 	base->view.vx = 0.4;
 	base->view.vy = 0.2;
 	base->view.zoom = 2;
-	base->interval = (base->win_x * base->win_y) / ((base->d.x * 10) * (base->d.y * 10));
-	if (base->interval > 200)
-		base->interval /= (base->interval / 2);
 	base->win_size = base->win_x * base->win_y;
-	base->mlx = mlx_init();
-	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Phil 2 frer");
-	base->img = (int *)malloc(sizeof(int) * base->win_size);
-	base->img = mlx_new_image(base->mlx, base->win_x, base->win_y);
 	base->bpp = 0;
 	base->endian = 0;
 	base->sizeline = base->win_y;
-	base->data = (int*)mlx_get_data_addr(base->img, &base->bpp, &base->sizeline, &base->endian);
+	base->mlx = mlx_init();
+	base->win = mlx_new_window(base->mlx, base->win_x, base->win_y, "Fdf");
+	base->img = (int *)malloc(sizeof(int) * base->win_size);
+	base->img = mlx_new_image(base->mlx, base->win_x, base->win_y);
+	base->data = (int*)mlx_get_data_addr(
+			base->img, &base->bpp, &base->sizeline, &base->endian);
 	return (*base);
 }
 
@@ -49,7 +47,7 @@ t_base	init_base(t_base *base)
 ** Init the t_d with all the x/y basic values
 */
 
-void		init_d(t_base *base)
+void	init_d(t_base *base)
 {
 	char	*str;
 	int		fd;
@@ -73,7 +71,7 @@ void		init_d(t_base *base)
 	j = 0;
 	fd = open(base->av[1], O_RDONLY);
 	while (get_next_line(fd, &str) > 0)
-		j = get_z(base, str, j); //+free() a ajouter
+		j = get_z(base, str, j);
 	base->d.z[j] = 0;
 	close(fd);
 }

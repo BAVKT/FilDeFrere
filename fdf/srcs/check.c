@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 21:33:33 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 20:20:08 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 21:23:45 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,16 @@ void	check_file(char *av)
 }
 
 /*
-** Get the x & y values 
+** Get the x & y values
 */
 
-void 	get_xy(t_base *base, char *line)
+void	get_xy(t_base *base, char *line)
 {
 	int		i;
 	int		j;
-	char	*c;
 
 	i = 0;
 	j = 0;
-	c = ft_strnew(8);
 	while (line[i])
 	{
 		while (line[i] && !ft_isdigit(line[i]))
@@ -76,7 +74,7 @@ void 	get_xy(t_base *base, char *line)
 }
 
 /*
-** Fill the z tab 
+** Fill the z tab
 */
 
 int		get_z(t_base *base, char *line, int j)

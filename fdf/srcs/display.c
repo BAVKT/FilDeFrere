@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 20:59:43 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 21:28:35 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void	draw_hori(t_base *base)
 		x = 0;
 		while (x < base->d.x)
 		{
-			base->xi = x - base->leftright  + base->updown;
+			base->xi = x - base->leftright + base->updown;
 			base->yi = y + base->updown + base->leftright;
-			base->xj = x - base->leftright  + base->updown + 1;
+			base->xj = x - base->leftright + base->updown + 1;
 			base->yj = y + base->updown + base->leftright + 1;
-			conv_iso(base, 0, base->d.z, i);
+			conv_iso(base, 0, i);
 			if (x + 1 <= base->d.x)
 				start_line(base);
 			i++;
@@ -60,11 +60,11 @@ void	draw_verti(t_base *base)
 		x = 0;
 		while (x < base->d.x)
 		{
-			base->xi = x - base->leftright  + base->updown;
+			base->xi = x - base->leftright + base->updown;
 			base->yi = y + base->updown + base->leftright;
-			base->xj = x - base->leftright  + base->updown + 1;
+			base->xj = x - base->leftright + base->updown + 1;
 			base->yj = y + base->updown + base->leftright + 1;
-			conv_iso(base, 1, base->d.z, i);
+			conv_iso(base, 1, i);
 			if (x + 1 < base->d.x)
 				start_line(base);
 			i++;
@@ -99,7 +99,7 @@ void	start_line(t_base *base)
 		line2(base, xx, yy);
 }
 
-void line1(t_base *base, int xx, int yy) 
+void	line1(t_base *base, int xx, int yy)
 {
 	int	i;
 	int cumul;
@@ -131,7 +131,7 @@ void	line2(t_base *base, int xx, int yy)
 	{
 		base->y += yy;
 		cumul += base->dx;
-		if (cumul >= base->dy) 
+		if (cumul >= base->dy)
 		{
 			cumul -= base->dy;
 			base->x += xx;

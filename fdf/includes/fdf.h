@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 20:50:24 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/13 21:28:26 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ typedef struct 		s_base
 	int				zmax;
 	int				zmin;
 	int				win_size;
-	int 			interval;
 	int				updown;
 	int				leftright;
 	int				dx;
@@ -73,58 +72,52 @@ typedef struct 		s_base
 }					t_base;
 
 /*
-** Inits
+** Init.c
 */
 
 t_base				init_base(t_base *base);
 void				init_d(t_base *base);
 
 /*
-** Parsing
+** Check.c
 */
 
-void				error(int e);
 void				check_file(char *av);
-int					get_interval(t_base *base);
 void 				get_xy(t_base *base, char *line);
 int					get_z(t_base *base, char *line, int j);
 
 /*
-** Conv
+** Utils.c
 */
 
-void 				conv_iso(t_base *base, int n, int *z, int i);
-void				conv_para(t_base *base, int x, int y, int z);
-void 				conv_xy(t_base *base, int z);
-void				get_pos(t_base *base, int i);
+void				error(int e);
+void				px_img(t_base *base, int x, int y, int color);
+void 				conv_iso(t_base *base, int n, int i);
 
 /*
-** Display & drawing
+** Display.c
 */
 
-void				fdf(t_base *base);
+void				start_line(t_base *base);
 void				draw_hori(t_base *base);
 void				draw_verti(t_base *base);
-void				start_line(t_base *base);
 void				line1(t_base *base, int xx, int yy);
 void				line2(t_base *base, int xx, int yy);
-void				px_img(t_base *base, int x, int y, int color);
-void				ui(t_base *base);
 
 /*
-** Colors
-*/
-
-void				get_color(t_base *base, int z);
-int					get_gradiant(t_base *base, int z, unsigned int color);
-
-/*
-** Event
+** Event.c
 */
 
 int					event(int keycode, void *param);
 void				ev_move(int k, t_base *base);
 void				ev_else(int k, t_base *base);
 void				refresh(t_base *base);
+
+/*
+** FDF.c
+*/
+
+void				fdf(t_base *base);
+void				ui(t_base *base);
 
 #endif
