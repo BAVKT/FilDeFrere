@@ -6,43 +6,38 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 21:28:26 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/14 20:20:57 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __FDF_H
 # define __FDF_H
-#include "mlx.h"
-#include "libft.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <errno.h>
-#define SIZE 42
+# include "mlx.h"
+# include "libft.h"
+# include <fcntl.h>
+# define SIZE 42
 
-//Les coordonees du point de vue. Le x et y correspondent aux tailles de la fenettre divisé par deux 
-//et le z represente la distance approximative entre nous et l'ecran. On va dire 1000.
-typedef struct 		s_view
-{	
+typedef struct		s_view
+{
 	double			vx;
 	double			vy;
 	double			vz;
 	double			zoom;
 }					t_view;
-	
-typedef struct 		s_d
-{	
+
+typedef struct		s_d
+{
 	int				x;
 	int				y;
 	int				*z;
-} 					t_d;
+}					t_d;
 
-typedef struct 		s_base
+typedef struct		s_base
 {
-	void 			*mlx;
-	void 			*win;
-	void			*img;		//Stocke les valeurs RGB sur les 8/16/24 bits de chaque case
-	char			**av;
+	void			*mlx;
+	void			*win;
+	void			*img;
+	char			*av;
 	int				*data;
 	int				alt;
 	int				size;
@@ -63,12 +58,12 @@ typedef struct 		s_base
 	int				yj;
 	int				*x2;
 	int				*y2;
-	int				endian;		//Ordre dans lequel on stocke les bits dans les octets
-	int				sizeline;	//La taille d'une ligne
+	int				endian;
+	int				sizeline;
 	int				bpp;
-	struct	s_d		d;
-	struct	s_view	view;
-	unsigned int	color;		//La couleur qu'on passe a get_color_value
+	struct s_d		d;
+	struct s_view	view;
+	unsigned int	color;
 }					t_base;
 
 /*
@@ -83,7 +78,7 @@ void				init_d(t_base *base);
 */
 
 void				check_file(char *av);
-void 				get_xy(t_base *base, char *line);
+void				get_xy(t_base *base, char *line);
 int					get_z(t_base *base, char *line, int j);
 
 /*
@@ -92,7 +87,7 @@ int					get_z(t_base *base, char *line, int j);
 
 void				error(int e);
 void				px_img(t_base *base, int x, int y, int color);
-void 				conv_iso(t_base *base, int n, int i);
+void				conv_iso(t_base *base, int n, int i);
 
 /*
 ** Display.c

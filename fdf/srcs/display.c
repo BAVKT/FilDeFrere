@@ -6,14 +6,14 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:42:37 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 21:28:35 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/14 20:30:08 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
 /*
-** Draw the horizontals lines
+** Give the points to draw the horizontals lines
 */
 
 void	draw_hori(t_base *base)
@@ -44,7 +44,7 @@ void	draw_hori(t_base *base)
 }
 
 /*
-** Draw the verticals lines
+** Give the points to draw the verticals lines
 */
 
 void	draw_verti(t_base *base)
@@ -98,6 +98,10 @@ void	start_line(t_base *base)
 	else
 		line2(base, xx, yy);
 }
+
+/*
+** Draw the lines between
+*/
 
 void	line1(t_base *base, int xx, int yy)
 {

@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 18:46:46 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 21:28:21 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/14 20:30:09 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,18 +55,18 @@ void	conv_iso(t_base *base, int n, int i)
 	base->y = base->yi - base->d.y / 2;
 	base->xi = base->view.vx * (base->x - base->y) * base->view.zoom;
 	base->yi = base->view.vy * (base->x + base->y) * base->view.zoom;
-	base->yi -= base->d.z[i] * base->alt;
+	base->yi -= base->d.z[i] * base->alt / 3;
 	if (n)
 	{
 		base->xj = base->view.vx * ((base->x + 1) - base->y) * base->view.zoom;
 		base->yj = base->view.vy * ((base->x + 1) + base->y) * base->view.zoom;
-		base->yj -= base->d.z[i + 1] * base->alt;
+		base->yj -= base->d.z[i + 1] * base->alt / 3;
 	}
 	else
 	{
 		base->xj = base->view.vx * (base->x - (base->y + 1)) * base->view.zoom;
 		base->yj = base->view.vy * (base->x + (base->y + 1)) * base->view.zoom;
-		base->yj -= base->d.z[i + base->d.x] * base->alt;
+		base->yj -= base->d.z[i + base->d.x] * base->alt / 3;
 	}
 	base->xi += base->win_x / 2 - base->d.x / 2;
 	base->xj += base->win_x / 2 - base->d.x / 2;

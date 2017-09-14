@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 14:36:30 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 21:23:47 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/14 20:30:08 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,9 @@ void	ui(t_base *base)
 	mlx_string_put(base->mlx, base->win, 50, 20, 0x00ff00, "    - KEYS -");
 	mlx_string_put(base->mlx, base->win, 50, 50, w, "Move   =  Arrows");
 	mlx_string_put(base->mlx, base->win, 50, 70, w, "Colors =  NumPad");
-	mlx_string_put(base->mlx, base->win, 50, 90, w, "Zoom  =  +  &  -");
-	mlx_string_put(base->mlx, base->win, 50, 110, w, "Depth =  <  &  >");
+	mlx_string_put(base->mlx, base->win, 50, 90, w, "Quit   =  Esc");
+	mlx_string_put(base->mlx, base->win, 50, 110, w, "Zoom   =  +  &  -");
+	mlx_string_put(base->mlx, base->win, 50, 130, w, "Depth  =  <  &  >");
 }
 
 int		main(int ac, char **av)
@@ -51,9 +52,8 @@ int		main(int ac, char **av)
 		error(2);
 	if (!ft_strcmp(av[1], "usage"))
 		error(-1);
-	base.av = (char **)malloc(sizeof(char *) * ac - 1);
-	base.av = ft_cp_tab(base.av, av);
-	check_file(base.av[1]);
+	base.av = ft_strdup(av[1]);
+	check_file(base.av);
 	base = init_base(&base);
 	base.updown = 0;
 	base.leftright = 0;

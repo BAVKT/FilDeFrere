@@ -6,7 +6,7 @@
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 16:07:14 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/09/13 21:27:14 by vmercadi         ###   ########.fr       */
+/*   Updated: 2017/09/14 20:30:06 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ev_move(int k, t_base *base)
 }
 
 /*
-** Other events like exit & zoom
+** Other events (exit, zoom & color)
 */
 
 void	ev_else(int k, t_base *base)
